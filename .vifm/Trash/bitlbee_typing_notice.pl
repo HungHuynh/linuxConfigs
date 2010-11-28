@@ -1,0 +1,1 @@
+/ntfs-data/.dotFiles/irssi/scripts/bitlbee_typing_notice.pl

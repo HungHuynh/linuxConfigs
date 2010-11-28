@@ -1,0 +1,66 @@
+#!/bin/sh
+#Alias
+#Auto open files
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='feh'
+alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv}='mplayer'
+alias -s {mp3,ogg,wav,flac}='ncmpcpp'
+alias -s {html,php,com,net,org,gov}='chrome'
+alias -s pdf='mupdf'
+alias -s chm='xchm'
+alias -s {rar,zip,7z,tar}='extract'
+alias -s {txt}='v'
+
+# The 'cd' family ------------
+alias h='cd ~'
+alias home='cd ~' 
+alias dotfiles='cd /ntfs-data/.dotFiles/'
+
+#Sett File Edit
+alias update='yaourt -Syu'
+alias clean='pacman -Rsn $(pacman -Qdtq)'
+alias ls='ls --color=auto -h'
+alias bashrc='vim ~/.bashrc && source ~/.bashrc'
+alias zshrc='vim ~/.zshrc && source ~/.zshrc'
+alias rm='rm -r'
+alias cp='cp -i -r'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
+alias y='yaourt'
+
+#Quickly navigate fav folder
+alias inbox='cd /ntfs-data/inbox'
+alias book='cd /ntfs-data/docs/'
+alias work='cd /ntfs-data/work/'
+alias vid='cd /ntfs-data/vids'
+alias lang'cd /ntfs-data/docs/lang'
+alias build='cd /ntfs-data/.dotFiles/build'
+alias dwmbld='cd /ntfs-data/.dotFiles/build/dwm'
+alias webcode='cd /opt/lampp/htdocs'
+alias dev='cd /ntfs-data/dev/'
+
+#Application
+alias ff='firefox&exit'
+alias gimp='gimp&exit'
+alias pdf='mupdf'
+alias pidg='pidgin&'
+alias chrome='chromium-dev&exit'
+alias irc='irssi -n nXqd -w qungdung -c irc.freenode.net'
+alias music='mpd;mpdscribble;ncmpcpp'
+alias privoxy='privoxy /etc/privoxy/config'
+alias mplayer='mplayer -utf8'
+alias am90='amixer set Master 70%'
+alias am70='amixer set Master 50%'
+alias am100='amixer set Master 100%'
+alias def="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
+alias synonym="sdcv -u Moby\ Thesaurus\ II"
+
+#Editor
+alias vi='vim'
+alias v='vim'
+#Navigation
+alias ..='cd ..'
+alias ~='cd ~'
+#Misc
+alias go='startx'
+alias shutdown='shutdown -h now'
