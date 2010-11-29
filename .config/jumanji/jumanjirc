@@ -1,0 +1,25 @@
+
+# browser settings
+set homepage http://calendar.google.com
+set auto_save 60
+
+# look
+set font droid sans medium 9
+
+# key bindings
+map <C-q> quit
+
+# follow hint
+script ~/.config/jumanji/scripts/hints.js
+
+# custom css
+set stylesheet ~/.config/jumanji/nXqd.css
+
+# proxy
+# Search engines
+searchengine g http://www.google.com/search?q=%s
+searchengine imdb http://www.imdb.com/find?s=all&q=%s
+
+# Downloads
+set download_dir /ntfs-data/inbox/
+set download_command urxvt -e sh -c "wget --load-cookies ~/.config/jumanji/cookies '%s' -O %s";
