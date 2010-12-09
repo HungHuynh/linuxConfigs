@@ -4,10 +4,8 @@
 // static const int nmaster = 2;
 // #include "nmaster-sym.c"
 
-
-
 /* appearance */
-static const char font[]            = "-*-dejavu sans mono-r-*-*-11-*-*-*-*-*-*-*";
+static const char font[]            = "-*-monaco-r-*-*-11-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#212121";
 static const char normbgcolor[]     = "#2E3436";
 static const char normfgcolor[]     = "#696969";
@@ -19,13 +17,16 @@ static const unsigned int snap      = 5;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
+
 /* tagging */
 static const char *tags[] = { "www", "terms", "relax", "misc"};
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       NULL,            True,        -1 },
-	{ "chrome-browser",  NULL,       NULL,      NULL,       False,       -1 },
+	{ "Gimp",     NULL,       NULL,       NULL,         True,        -1 },
+	{ NULL,       "chromium", NULL,       1 << 0,       False,       -1 },
+	{ NULL,       NULL,       "terminal", 1 << 1,       False,       -1 },
+	{ NULL,       "MPlayer",  NULL,       1 << 2,       True,        -1 }
 };
 
 /* layout(s) */
@@ -34,8 +35,8 @@ static const Bool resizehints = False; /* True means respect size hints in tiled
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[F]",      NULL},    /* no layout function means floating behavior */
 	{ "[T]",      tile},    /* first entry is default */
+	{ "[F]",      NULL}     /* no layout function means floating behavior */
 //    { "-|=",      ntile },
 //    { "-|-",      nbstack }
 };
@@ -52,16 +53,23 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvt", NULL };
-static const char *chrome[]  = { "chromium-browser", NULL };
-static const char *pidgin[]  = { "pidgin", NULL };
-static const char *gimp[]  = { "gimp", NULL };
-static const char *music[]  = { "ncmpcpp", NULL };
-static const char *unikey[]  = { "ibus-daemon", NULL };
+static const char *dmenucmd[]      = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *termcmd[]       = { "urxvt", "-title", "terminal", "-e" , "tmux" , "attach" , "-d" , "-t0" , NULL };
+static const char *chrome[]        = { "chromium-dev", NULL };
+static const char *pidgin[]        = { "pidgin", NULL };
+static const char *gimp[]          = { "gimp", NULL };
+static const char *music[]         = { "ncmpcpp", NULL };
+static const char *unikey[]        = { "ibus-daemon", NULL };
+static const char *volumeUp[]      = { "amixer set Master 5%+", NULL };
+static const char *volumeDown[]    = { "amixer set Master 5%-", NULL };
+static const char *volumeMute[]    = { "amixer set Master toggle", NULL };
+static const char *ncmpcppToggle[]    = { "ncmpcpp toggle", NULL };
+static const char *ncmpcppStop[]    = { "ncmpcpp stop", NULL };
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+        // applications
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = chrome} },
@@ -69,6 +77,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_g,      spawn,          {.v = gimp} },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = music} },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = unikey} },
+
+        // multimedia
+	{ 0,                      0x1008ff13,      spawn,          {.v = volumeUp} },
+	{ 0,                      0x1008ff11,      spawn,          {.v = volumeDown} },
+	{ 0,                      0x1008ff12,      spawn,          {.v = volumeMute} },
+	{ 0,                      0x1008ff14,      spawn,          {.v = ncmpcppToggle} },
+	{ 0,                      0x1008ff15,      spawn,          {.v = ncmpcppToggle} },
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -79,8 +95,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[0]} },
-//	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[2]} },
-//	{ MODKEY,                       XK_b,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },

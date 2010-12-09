@@ -105,7 +105,11 @@ chatnets = {
     max_whois = "30";
   };
   SILC = { type = "SILC"; };
-  freeNode = { type = "IRC"; nick = "nXqd"; };
+  freeNode = { 
+      type = "IRC"; 
+      nick = "nXqd";
+      autosendcmd = "/msg nickserv identify qungdung; wait 2000";
+      };
   bitlee = {
     type = "IRC";
     autosendcmd = "account add yahoo nxqd_3051990 qungdung;wait 2000";

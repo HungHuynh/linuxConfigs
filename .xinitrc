@@ -1,12 +1,18 @@
 #!/bin/sh
+
+#xscreensaver 
+/usr/bin/xscreensaver -no-splash &
+
 #wallpaper random
 while true
 do
     feh --bg-scale "$(find /ntfs-data/pics/wall -type f | shuf -n1)"
     sleep 1m
 done &
+
 #Transparent
 xcompmgr&
+
 #font
 xset +fp /usr/share/fonts/local
 xset fp rehash
@@ -14,8 +20,8 @@ xset fp rehash
 syndaemon -t -i 2 &
 #Start mpd
 #mpd ~/.mpd/config
-#WM
 
+#WM
 wifi(){
       STATUS="X`iwgetid`"
       if test "$STATUS" != "X" ; then
@@ -64,5 +70,5 @@ while true; do
   xsetroot -name "`cmusstats` `batt` `wifi``volume` `date '+%a %d-%m-%Y %H:%M'`"
   sleep 1
 done &
-exec dwm
 (sleep 2 && exec conky)&
+exec dwm

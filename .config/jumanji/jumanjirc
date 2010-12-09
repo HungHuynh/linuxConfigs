@@ -4,7 +4,7 @@ set homepage http://calendar.google.com
 set auto_save 60
 
 # look
-set font droid sans medium 9
+set font droid sans mono medium 8
 
 # key bindings
 map <C-q> quit
@@ -13,7 +13,11 @@ map <C-q> quit
 script ~/.config/jumanji/scripts/hints.js
 
 # custom css
-set stylesheet ~/.config/jumanji/nXqd.css
+# set stylesheet file:///root/.config/jumanji/nXqd.css
+
+
+# Enable plugins
+plugin application/x-shockwave-flash
 
 # proxy
 # Search engines

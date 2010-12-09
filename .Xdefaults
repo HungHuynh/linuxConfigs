@@ -4,6 +4,10 @@
 ! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! -------------------------------------------------
 
+
+! Common
+Xcursor.theme: comix
+
 ! Urxvt
 URxvt.buffered: true
 URxvt.background: #1A1A1A
@@ -32,8 +36,9 @@ URxvt*tintColor: #1A1A1A
 URxvt*shading: 0
 
 ! -- Fonts -- !
-URxvt.font:xft:monaco:medium:size=8
-URxvt.boldFont:xft:monaco:medium:size=8
+URxvt.font:xft:monaco:medium:size=8.5
+URxvt.boldFont:xft:monaco:bold:size=8.5
+
 !URxvt.font:xft:droid sans mono dotted:medium:pixelsize=11
 !URxvt.boldFont:xft:droid sans mono dotted:pixelsize=11
 !URxvt.font:xft:inconsolata:bold:pixelsize=12
@@ -152,5 +157,5 @@ xcalc.ti.button34.background: #444484
 xcalc.ti.button37.background: #555595
 xcalc.ti.button38.background: #555595
 xcalc.ti.button39.background: #555595
-XCalc*Cursor:                 hand2
+XCalc*Cursor:                 hand2 
 XCalc*ShapeStyle:             rectangle

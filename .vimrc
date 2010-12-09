@@ -18,8 +18,7 @@
 "    -> Mouse Stuffs
 "    -> Editing mappings
 "
-"    -> Cope
-"    -> ZenCoding
+"    -> cTags
 "    -> Omni complete functions
 "    -> Python section
 "    -> JavaScript section
@@ -50,6 +49,8 @@
     filetype plugin on
     filetype indent on
     syntax on
+    let g:tex_flavor = "latex"
+    set grepprg=grep\ -nH\ $*
     
     " Set auto read when the file is changed outside
     set autoread
@@ -135,7 +136,7 @@
     set si "Smart indet
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
+" => Spelling checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     "Pressing ,ss will toggle and untoggle spell checking
@@ -147,10 +148,6 @@
     map <leader>sa zg
     map <leader>s? z
 
-" -------------------------- Zencoding settings
-let g:user_zen_expandabbr_key = '<c-z>,'
-let g:use_zen_complete_tag = 1
-
 "===============================================================
 " Mapping
 "---------------------------------------------------------------
@@ -158,13 +155,42 @@ let g:use_zen_complete_tag = 1
     map <c-a> ggVG
     set completeopt=menu,longest,preview
     set confirm
-" Settings for taglist.vim
-"let Tlist_Ctags_Cmd = 'd:\soft\Programming\GVimPortable\ctags\ctags.exe'
 map <F4> :TlistToggle<cr>
 map <F3> :NERDTreeToggle<cr>
 "SuperTab config
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
+"===============================================================
+" cTags
+"---------------------------------------------------------------
+set tags+=~/.vim/tags/cpp
+
+"===============================================================
+" OmniComplete Functions
+"---------------------------------------------------------------
+
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
+
+
+"---------------------- NOTE
+
+"---------------------- LATEX
+let g:Tex_ViewRule_pdf = 'zathura'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+
 
 "---------------------- HAML
 au! BufRead,BufNewFile *.haml setfiletype haml
@@ -190,7 +216,5 @@ ab lorem Lorem ipsum dolor sit amet, consectetur <CR>
          \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore <CR>
          \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <CR>
          \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <CR>
-         \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <CR>
-         \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non <CR>
          \ proident, sunt in culpa qui officia deserunt mollit anim id est <CR>
          \ laborumkl

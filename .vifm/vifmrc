@@ -95,7 +95,7 @@ BOOKMARKS=z=/home/jason/.vifm=../
 # %D the other window directory name.
 # %m run the command in a menu window
 
-COMMAND=apvlv=apvlv *.{pdf} &
+COMMAND=zathura=zathura *.{pdf} &
 COMMAND=feh=feh *.{jpeg,jpg,png,tif,gif} &
 COMMAND=mplayer=mplayer *.{avi,mov,flv,mov,mp4,mpeg,mpg,ogg,ogv} &
 COMAND=uzbl=uzbl *.{html,htm,shtml} &
@@ -112,7 +112,8 @@ COMAND=uzbl=uzbl *.{html,htm,shtml} &
 FILETYPE=Images=jpg,jpeg,gif,tif,png,bmp=feh 
 FILETYPE=Movies=f4v,flv,avi,mp4,mpeg,mpg,mov,ogg,ogv=mplayer 
 FILETYPE=Web=html,htm,shtml=uzbl 
-FILETYPE=PDF=pdf=apvlv 
+FILETYPE=PDF=pdf=zathura 
+FILETYPE=CHM=chm=xchm 
 
 # For automated FUSE mounts, you must register an extension with FILETYPE=..
 # in the following format:

@@ -50,8 +50,8 @@ ${voffset 4}${fs_used /ntfs-data}/${fs_size /ntfs-data} ${alignr}${fs_bar 8,60 /
 
 NETWORK ${hr 2}
 ${if_existing /proc/net/route wlan0}
-${voffset -6}${font PizzaDude Bullets:size=14}O${font}   Up: ${upspeed wlan0} kb/s ${alignr}${upspeedgraph wlan0 8,60 F57900 FCAF3E}
-${voffset 4}${font PizzaDude Bullets:size=14}U${font}   Down: ${downspeed wlan0} kb/s ${alignr}${downspeedgraph wlan0 8,60 F57900 FCAF3E}
+${voffset -6}${font PizzaDude Bullets:size=14}O${font}   Up: ${upspeed wlan0}${alignr}${upspeedgraph wlan0 8,60 F57900 FCAF3E}
+${voffset 4}${font PizzaDude Bullets:size=14}U${font}   Down: ${downspeed wlan0}${alignr}${downspeedgraph wlan0 8,60 F57900 FCAF3E}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font}   Upload: ${alignr}${totalup wlan0}
 ${voffset 4}${font PizzaDude Bullets:size=14}T${font}   Download: ${alignr}${totaldown wlan0}
 ${voffset 4}${font PizzaDude Bullets:size=14}Z${font}   Signal: ${wireless_link_qual wlan0}% ${alignr}${wireless_link_bar 8,60 wlan0}
