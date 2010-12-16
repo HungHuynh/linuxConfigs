@@ -4,7 +4,7 @@
 ! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! -------------------------------------------------
 
-
+xvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
 ! Common
 Xcursor.theme: comix
 

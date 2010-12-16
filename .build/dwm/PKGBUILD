@@ -39,3 +39,6 @@ build() {
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
          '0e227e33c64ea92c2da30a5061d39f5b'
          '939f403a71b6e85261d09fc3412269ee')
+md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
+         '42b30beff0eab1cea644466d0eeaf0b1'
+         '939f403a71b6e85261d09fc3412269ee')
