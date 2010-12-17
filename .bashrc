@@ -125,7 +125,7 @@ alias lock="xscreensaver-command -lock"
 ######## Pacman ########
 ########################
 # Colourized output
-alias pacman="pacman-color"
+alias pacman="pacman"
 
 # Lets you search through all available packages simply using 'pacsearch packagename'
 alias pacsearch="pacman -Sl | cut -d' ' -f2 | grep "

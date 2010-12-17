@@ -69,6 +69,6 @@ cmusstats(){
 while true; do
   xsetroot -name "`cmusstats` `batt` `wifi``volume` `date '+%a %d-%m-%Y %H:%M'`"
   sleep 1
+#(sleep 2 && exec conky)&
 done &
-(sleep 2 && exec conky)&
 exec dwm

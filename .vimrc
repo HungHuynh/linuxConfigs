@@ -249,6 +249,9 @@ cno $c e <C-\>eCurrentFileDir("e")<cr>
 " $q is super useful when browsing on the command line
 cno $q <C-\>eDeleteTillSlash()<cr>
 
+" map select all text to C-A
+noremap <C-A> ggVG
+
 " Bash like keys for the command line
 cnoremap <C-A>		<Home>
 cnoremap <C-E>		<End>
@@ -304,6 +307,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -406,8 +410,7 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Remap VIM 0
-map 0 ^
+"Remap
 
 "Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
@@ -461,7 +464,7 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplVSplit = 25
+let g:miniBufExplVSplit = 15
 let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
@@ -535,7 +538,7 @@ endfunction
 
 
 """"""""""""""""""""""""""""""
-" => MRU plugin
+" => MRU blugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>

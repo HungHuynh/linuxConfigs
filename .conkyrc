@@ -67,6 +67,7 @@ ${voffset 4}${font PizzaDude Bullets:size=14}b${font}   Public Ip: ${alignr}${ex
 ${endif}${else}
 ${font PizzaDude Bullets:size=14}4${font}   Network Unavailable
 ${endif}
+
 NOTIFICATIONS ${hr 2}
 ${voffset -8}${font Martin Vogel's Symbols:size=19}B${font}  New e-mails: ${alignr} ${execi 120 conkyEmail -m IMAP -s imap.googlemail.com -u Nxqd3051990 -p qungdung -e}
 ${voffset 4}${font PizzaDude Bullets:size=14}B${font}   Packages: ${alignr} ${execi 10800 ~/pmupdate.sh}
