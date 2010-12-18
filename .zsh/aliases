@@ -40,9 +40,7 @@ alias webcode='cd /opt/lampp/htdocs'
 alias dev='cd /ntfs-data/dev/'
 
 #Application
-alias ff='firefox&exit'
 alias gimp='gimp&exit'
-alias pdf='mupdf'
 alias pidg='pidgin&'
 alias chrome='chromium-dev&exit'
 alias irc='irssi -n nXqd -w qungdung -c irc.freenode.net'
@@ -54,6 +52,7 @@ alias am70='amixer set Master 50%'
 alias am100='amixer set Master 100%'
 alias def="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
 alias synonym="sdcv -u Moby\ Thesaurus\ II"
+alias pc="python2 ~/.scripts/ideone.py"
 
 #Editor
 alias vi='vim'
