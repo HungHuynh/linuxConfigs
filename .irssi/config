@@ -297,4 +297,3 @@ settings = {
     emphasis = "OFF";
     theme = "miromiro";
 };
-hilights = ( { text = "nick"; nick = "yes"; word = "yes"; } );

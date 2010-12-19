@@ -12,7 +12,7 @@
     while true
     do
         feh --bg-scale "$(find /ntfs-data/pics/wall -type f | shuf -n1)"
-        sleep 1m
+        sleep 15m
     done &
 
     #Transparent

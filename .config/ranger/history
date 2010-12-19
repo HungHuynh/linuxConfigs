@@ -1,0 +1,10 @@
+open_with 
+delete 
+find go
+find 
+delete seriously? y
+cd /etc/
+find ntpd
+find .config
+find \.config
+
