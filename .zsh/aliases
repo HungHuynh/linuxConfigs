@@ -5,7 +5,7 @@ alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='feh'
 alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv}='mplayer'
 alias -s {mp3,ogg,wav,flac}='ncmpcpp'
 alias -s {html,php,com,net,org,gov}='chrome'
-alias -s pdf='mupdf'
+alias -s pdf='zathura'
 alias -s chm='xchm'
 alias -s {rar,zip,7z,tar}='extract'
 alias -s {txt}='v'
@@ -52,6 +52,7 @@ alias am100='amixer set Master 100%'
 alias def="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
 alias synonym="sdcv -u Moby\ Thesaurus\ II"
 alias pc="python2 ~/.scripts/ideone.py"
+#alias network-config = "wpa
 
 #Editor
 alias vi='vim'

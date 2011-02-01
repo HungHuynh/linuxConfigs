@@ -15,8 +15,8 @@
         sleep 15m
     done &
 
-    #Transparent
-    xcompmgr&
+    #Transparent , it causes mplayer flickering
+    # xcompmgr&
 
     #font
     xset +fp /usr/share/fonts/local

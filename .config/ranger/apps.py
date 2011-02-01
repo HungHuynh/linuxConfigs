@@ -20,13 +20,13 @@ and application handling.
 You can place this file in your ~/.config/ranger/ directory and it will be used
 instead of this one.  Though, to minimize your effort when upgrading ranger,
 you may want to subclass CustomApplications rather than making a full copy.
-            
+
 This example modifies the behaviour of "feh" and adds a custom media player:
 
 #### start of the ~/.config/ranger/apps.py example
 	from ranger.defaults.apps import CustomApplications as DefaultApps
 	from ranger.api.apps import *
-			
+
 	class CustomApplications(DefaultApps):
 		def app_kaffeine(self, c):
 			return tup('kaffeine', *c)
@@ -187,7 +187,7 @@ class CustomApplications(Applications):
 	def app_mimeopen(self, c):
 		if c.mode is 0:
 			return tup("mimeopen", *c)
-		if c.mode is 1: 
+		if c.mode is 1:
 			# Will ask user to select program
 			# aka "Open with..."
 			return tup("mimeopen", "--ask", *c)
@@ -205,7 +205,7 @@ CustomApplications.generic('vim', 'fceux', 'elinks', 'wine',
 
 # By setting flags='d', this programs will not block ranger's terminal:
 CustomApplications.generic('opera', 'firefox', 'apvlv', 'evince',
-		'zathura', 'gimp', 'mirage', 'eog', flags='d')
+		'zathura', 'gimp', 'mirage', 'eog','mplayer', flags='d')
 
 # What filetypes are recognized as scripts for interpreted languages?
 # This regular expression is used in app_default()

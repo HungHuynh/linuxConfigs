@@ -1,10 +1,24 @@
-open_with 
-delete 
 find go
 find 
-delete seriously? y
 cd /etc/
 find ntpd
 find .config
 find \.config
+open_with o
+find roo
+find .confi
+open_with 
+rename Big Bang - Tell Me Goodbye - HD 1080p.avi.001
+shell 
+shell -p cat Big\ Bang\ -\ Tell\ Me\ Goodbye\ -\ HD\ 1080p.avi.001 Big\ Bang\ -\ Tell\ Me\ Goodbye\ -\ HD\ 1080p.avi.002 > %s 
+open_with mplayer
+Q
+search profile
+open_with c
+search rc\.d
+search linksys
+shell find . *linksys*
+search network
+delete 
+delete seriously? y
 
