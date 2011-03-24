@@ -40,20 +40,19 @@ alias webcode='cd /opt/lampp/htdocs'
 alias dev='cd /ntfs-data/dev/'
 
 #Application
-alias gimp='gimp&exit'
-alias pidg='pidgin&'
-alias chrome='chromium-dev&exit'
-alias irc='irssi -n nXqd -w qungdung -c irc.freenode.net'
-alias music='mpd;mpdscribble;ncmpcpp'
-alias mplayer='mplayer -utf8'
-alias am90='amixer set Master 70%'
-alias am70='amixer set Master 50%'
-alias am100='amixer set Master 100%'
-alias def="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
-alias synonym="sdcv -u Moby\ Thesaurus\ II"
-alias pc="python2 ~/.scripts/ideone.py"
-#alias network-config = "wpa
-
+alias agimp='gimp&exit'
+alias apidg='pidgin&'
+alias achrome='chromium-dev&exit'
+alias airc='irssi -n nXqd -w qungdung -c irc.freenode.net'
+alias amusic='mpd;mpdscribble;ncmpcpp'
+alias amplayer='mplayer -utf8'
+alias aam90='amixer set Master 70%'
+alias aam70='amixer set Master 50%'
+alias aam100='amixer set Master 100%'
+alias adef="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
+alias asynonym="sdcv -u Moby\ Thesaurus\ II"
+alias apc="python2 ~/.scripts/ideone.py"
+alias awpa='wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf;ifconfig wlan0 192.168.1.7;route add default gw 192.168.1.1;'
 #Editor
 alias vi='vim'
 alias v='vim'

@@ -28,7 +28,9 @@
  twit () {
     curl -u Nxqd3051990:reachyourgoal\&7\& -d status="$*" http://twitter.com/statuses/update.xml > /dev/null &2>1 ;
  }
-# Flash player - due to flash 64bit can't play in full screen
- mplayer-web () { 
-    mplayer /tmp/Flash*;
+
+# Make dir and move into it
+ mkcd () {
+    mkdir -p "$@" && cd "$_"; }
  }
+

@@ -5,7 +5,7 @@
 // #include "nmaster-sym.c"
 
 /* appearance */
-static const char font[]            = "-*-monaco-r-*-*-11-*-*-*-*-*-*-*";
+static const char font[]            = "-*-dina-medium-r-*-*-*-80-*-*-*-*-*-*";
 static const char normbordercolor[] = "#212121";
 static const char normbgcolor[]     = "#2E3436";
 static const char normfgcolor[]     = "#696969";
