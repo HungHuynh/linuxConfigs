@@ -31,6 +31,6 @@
 
 # Make dir and move into it
  mkcd () {
-    mkdir -p "$@" && cd "$_"; }
+    mkdir -p "$@" && cd "$_"; 
  }
 

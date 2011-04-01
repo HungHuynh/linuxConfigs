@@ -37,7 +37,7 @@ alias lang'cd /ntfs-data/docs/lang'
 alias build='cd /ntfs-data/.dotFiles/build'
 alias dwmbld='cd /ntfs-data/.dotFiles/build/dwm'
 alias webcode='cd /opt/lampp/htdocs'
-alias dev='cd /ntfs-data/dev/'
+alias dev='cd /ntfs-data/Dropbox/dev/'
 
 #Application
 alias agimp='gimp&exit'
