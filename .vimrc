@@ -52,16 +52,6 @@
 "           info -> :help CommandT
 "           screencast and web-help -> http://amix.dk/blog/post/19501
 "
-"
-"  Revisions:
-"     > 3.6: Added lots of stuff (colors, Command-T, Vim 7.3 persistent undo etc.)
-"     > 3.5: Paste mode is now shown in status line  if you are in paste mode
-"     > 3.4: Added mru.vim
-"     > 3.3: Added syntax highlighting for Mako mako.vim 
-"     > 3.2: Turned on python_highlight_all for better syntax
-"            highlighting for Python
-"     > 3.1: Added revisions ;) and bufexplorer.vim
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -194,7 +184,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+set nowrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""

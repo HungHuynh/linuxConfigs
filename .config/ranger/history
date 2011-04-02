@@ -19,6 +19,12 @@ search rc\.d
 search linksys
 shell find . *linksys*
 search network
-delete 
+cd /root/.vim/
+delete seriously? j
+!
+shell mv after.~1~ after
+shell mv autoload.~1~ autoload
 delete seriously? y
+shell mv doc.~1~ doc
+delete 
 

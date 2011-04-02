@@ -23,6 +23,7 @@ plugin application/x-shockwave-flash
 # Search engines
 searchengine g http://www.google.com/search?q=%s
 searchengine imdb http://www.imdb.com/find?s=all&q=%s
+searchengine timer http://e.ggtimer.com/%s
 
 # Downloads
 set download_dir /ntfs-data/inbox/

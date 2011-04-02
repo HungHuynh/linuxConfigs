@@ -1,10 +1,10 @@
 a:/ntfs-data/audio
 b:/ntfs-data/My Dropbox
 d:/ntfs-data/docs
-':/
+':/root
 i:/ntfs-data/inbox
 m:/ntfs-data
 l:/
 r:/root
-v:/ntfs-data/vids
+v:/root/.vim
 y:/ntfs-data

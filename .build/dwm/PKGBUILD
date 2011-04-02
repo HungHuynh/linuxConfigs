@@ -37,17 +37,26 @@ build() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir//etc/X11/sessions/dwm.desktop
 }
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         '0e227e33c64ea92c2da30a5061d39f5b'
+         '7146e777c640bf2fcc288f7519bbb3dc'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         '42b30beff0eab1cea644466d0eeaf0b1'
+         '69dc5eb9cbac427f6f16bb45a7816999'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         '5a40ae05067613650af717dd4e9d6e2f'
+         '7dad6f7745187b0a9905fdaf87115eda'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         '36e946b234f362660f0ec92469b6937e'
+         '7dad6f7745187b0a9905fdaf87115eda'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         '36e946b234f362660f0ec92469b6937e'
+         'ea437dd63db595fb1691a43823ee46e9'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
+         'f290e5948c2598bc7d7bf54ca6df259b'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
+         'f290e5948c2598bc7d7bf54ca6df259b'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
+         '307c33fd85343b7cd6ed8df576dbd3e6'
          '939f403a71b6e85261d09fc3412269ee')
