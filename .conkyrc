@@ -69,12 +69,12 @@ ${font PizzaDude Bullets:size=14}4${font}   Network Unavailable
 ${endif}
 
 NOTIFICATIONS ${hr 2}
-${voffset -8}${font Martin Vogel's Symbols:size=19}B${font}  New e-mails: ${alignr} ${execi 120 conkyEmail -m IMAP -s imap.googlemail.com -u Nxqd3051990 -p qungdung -e}
+${voffset -8}${font Martin Vogel's Symbols:size=19}B${font}  New e-mails: ${alignr} ${execi 120 conkyEmail -m IMAP -s imap.gmail.com -u Nxqd3051990 -p reachyourgoal7&7 -e}
 ${voffset 4}${font PizzaDude Bullets:size=14}B${font}   Packages: ${alignr} ${execi 10800 ~/pmupdate.sh}
 
-#MPD ${hr 2}
-#${voffset 4}${font Webdings:size=14}U${font}   Status: $alignr$mpd_status
-#${voffset 4}${font Webdings:size=14}4${font}   Song: $alignr$mpd_artist
-#${voffset 4}$alignr$mpd_title
-#${font Martin Vogel's Symbols:size=16}U${font}    Elapsed:
-#${voffset 4}$mpd_elapsed/$mpd_length $alignr${mpd_bar 8,120}
+MPD ${hr 2}
+${voffset 4}${font Webdings:size=14}U${font}   Status: $alignr$mpd_status
+${voffset 4}${font Webdings:size=14}4${font}   Song: $alignr$mpd_artist
+${voffset 4}$alignr$mpd_title
+${font Martin Vogel's Symbols:size=16}U${font}    Elapsed:
+${voffset 4}$mpd_elapsed/$mpd_length $alignr${mpd_bar 8,120}

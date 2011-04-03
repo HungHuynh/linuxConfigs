@@ -39,12 +39,13 @@ alias webcode='cd /opt/lampp/htdocs'
 alias dev='cd /ntfs-data/Dropbox/dev/'
 
 #Application
-alias agimp='gimp&exit'
-alias apidg='pidgin&'
+alias urxvt='urxvtc&'
+alias gimp='gimp&exit'
+alias pidg='pidgin&'
 alias achrome='chromium-dev&exit'
 alias airc='irssi -n nXqd -w qungdung -c irc.freenode.net'
+alias mpd='mpd ~/.mpdconf'
 alias amusic='mpd;mpdscribble;ncmpcpp'
-alias ampd='mpd ~/.mpdconf'
 alias amplayer='mplayer -utf8'
 alias aam90='amixer set Master 70%'
 alias aam70='amixer set Master 50%'
@@ -53,6 +54,7 @@ alias adef="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
 alias asynonym="sdcv -u Moby\ Thesaurus\ II"
 alias apc="python2 ~/.scripts/ideone.py"
 alias awpa='wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf;ifconfig wlan0 192.168.1.7;route add default gw 192.168.1.1;'
+alias make_dwm='makepkg -g --asroot >> PKGBUILD;makepkg -efi --asroot'
 #Editor
 alias vi='vim'
 alias v='vim'
