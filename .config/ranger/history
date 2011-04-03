@@ -27,4 +27,5 @@ shell mv autoload.~1~ autoload
 delete seriously? y
 shell mv doc.~1~ doc
 delete 
+cd --
 

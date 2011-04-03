@@ -1,28 +1,4 @@
 servers = (
-  { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
-  { 
-    address = "irc.undernet.org";
-    chatnet = "Undernet";
-    port = "6667";
-  },
-  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
-  { 
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
-  },
-  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6667"; },
-  {
-    address = "irc.gamesurge.net";
-    chatnet = "GameSurge";
-    port = "6667";
-  },
-  { address = "irc.webchat.org"; chatnet = "WebChat"; port = "6667"; },
-  { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
-  { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
-  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
   {
     address = "irc.freenode.net";
     chatnet = "freeNode";
@@ -42,83 +18,20 @@ servers = (
 );
 
 chatnets = {
-  IRCnet = {
+  freeNode = {
     type = "IRC";
-    max_kicks = "4";
-    max_msgs = "5";
-    max_whois = "4";
-    max_query_chans = "5";
+    nick = "nXqd";
+    autosendcmd = "/msg nickserv identify qungdung; wait 2000";
   };
-  EFNet = { 
+  bitlee = { type = "IRC"; };
+  bitlbee = {
     type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  OFTC = {
-    type = "IRC";
-    autosendcmd = "/^msg nickserv nXqd qungdung;wait 2000";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  GameSurge = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  WebChat = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  Rizon = { 
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  LinkNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  SILC = { type = "SILC"; };
-  freeNode = { 
-      type = "IRC"; 
-      nick = "nXqd";
-      autosendcmd = "/msg nickserv identify qungdung; wait 2000";
-      };
-  bitlee = {
-    type = "IRC";
-    autosendcmd = "account add yahoo nxqd_3051990 qungdung;wait 2000";
+    autosendcmd = "/^msg identify qungdung;wait 2000";
   };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#enhack"; chatnet = "freeNode"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "freeNode"; autojoin = "yes"; }
 );
@@ -292,8 +205,20 @@ settings = {
     nicklist_width = "20";
     nicklist_automode = "screen";
   };
+  "fe-common/core" = {
+    term_charset = "utf-8";
+    completion_strict = "no";
+    completion_char = "= :";
+    beep_when_away = "yes";
+    beep_when_window_active = "yes";
+    bell_beeps = "yes";
+  };
 };
-"fe-common/core" = {
-    emphasis = "OFF";
-    theme = "miromiro";
-};
+"fe-common/core" = { emphasis = "OFF"; theme = "miromiro"; };
+hilights = ( { text = "nXqd"; nick = "yes"; word = "yes"; } );
+keyboard = (
+  { key = "WI"; id = "command"; data = "whois "; },
+  { key = "^L"; id = "command"; data = "clear "; },
+  { key = "meta-up"; id = "scroll_backward"; data = ""; },
+  { key = "meta-down"; id = "scroll_backward"; data = ""; }
+);

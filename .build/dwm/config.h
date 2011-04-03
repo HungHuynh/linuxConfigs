@@ -1,4 +1,5 @@
-/* See LICENSE file for copyright and license details. */
+/* for XF86 Media Keys */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const char font[]            = "-*-monaco-*-*-*-*-10-*-*-*-*-*-*-*";
@@ -23,7 +24,7 @@ static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
 //static const char *tags[] = { "WEB", "CODE", "BOOK", "RELAX", "DESIGN", "ELSE"};
-static const char *tags[] = { ".", ":", ".:", "::", ".::", ":::"};
+static const char *tags[] = { ".", ":", ".:", "::", ".::"};
 
 static const Rule rules[] = {
     /* class      instance          title         tags mask     isfloating   monitor */
@@ -65,9 +66,9 @@ static const char *pidgin[]        = { "pidgin", NULL };
 static const char *gimp[]          = { "gimp", NULL };
 static const char *music[]         = { "ncmpcpp", NULL };
 static const char *unikey[]        = { "ibus-daemon", NULL };
-static const char *volumeUp[]      = { "amixer set Master 5%+", NULL };
-static const char *volumeDown[]    = { "amixer set Master 5%-", NULL };
-static const char *volumeMute[]    = { "amixer set Master toggle", NULL };
+static const char *RaiseVolume[]   = { "amixer set Master 5%+", NULL };
+static const char *LowerVolume[]   = { "amixer set Master 5%-", NULL };
+static const char *volumeToggle[]  = { "amixer set Master toggle", NULL };
 static const char *ncmpcppToggle[] = { "ncmpcpp toggle", NULL };
 static const char *ncmpcppStop[]   = { "ncmpcpp stop", NULL };
 static const char *padcmd[]        = { "urxvtc", "-title", "pad", "-geometry", "70x12+730+24", NULL };
@@ -84,9 +85,9 @@ static Key keys[] = {
     { Mod4Mask,                     XK_u,      spawn,          {.v = unikey} },
     { Mod4Mask,                     XK_p,      spawn,          {.v = padcmd} },
         // multimedia
-    { 0,                      0x1008ff13,      spawn,          {.v = volumeUp} },
-    { 0,                      0x1008ff11,      spawn,          {.v = volumeDown} },
-    { 0,                      0x1008ff12,      spawn,          {.v = volumeMute} },
+    { 0,            XF86XK_AudioRaiseVolume,      spawn,          {.v = RaiseVolume} },
+    { 0,            XF86XK_AudioLowerVolume,      spawn,          {.v = LowerVolume} },
+    { 0,            XF86XK_AudioMute,             spawn,          {.v = volumeToggle} },
     { 0,                      0x1008ff14,      spawn,          {.v = ncmpcppToggle}},
     { 0,                      0x1008ff15,      spawn,          {.v = ncmpcppToggle}},
 

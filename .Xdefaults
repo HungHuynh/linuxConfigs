@@ -1,12 +1,9 @@
-! -------------------------------------------------
-! file:     ~/.Xdefaults                           
-! author:   jason ryan - http://jasonwryan.com/    
-! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
-! -------------------------------------------------
-
-xvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
 ! Common
 Xcursor.theme: comix
+
+! Enable iBus/SCIM support
+URxvt*inputMethod: ibus
+URxvt*preeditType: OnTheSpot,None
 
 ! Urxvt
 URxvt.buffered: true
