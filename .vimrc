@@ -12,24 +12,27 @@
 "    -> Moving around, tabs and buffers
 "    -> Statusline
 "    -> Parenthesis/bracket expanding
-"    -> General Abbrevs
 "    -> Editing mappings
 "
-"    -> Cope
-"    -> Minibuffer plugin
-"    -> Omni complete functions
-"    -> Python section
-"    -> JavaScript section
+"    -> Plugins       
+"       -> Cope
+"       -> NERDTree plugin
+"       -> Minibuffer plugin
+"       -> MRU plugin
+"       -> Command-T plugin
+"       -> Omni complete functions
+"    -> Languges
+"       -> Python section
+"       -> JavaScript section
 "
 "
 " Plugins_Included:
+"     > tabular.vim - https://github.com/godlygeek/tabular
+"       Makes it easy to align text
+"           info -> http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+"
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
 "       Makes it easy to get an overview of buffers:
-"           info -> :e ~/.vim_runtime/plugin/minibufexpl.vim
-"
-"     > bufexplorer - http://www.vim.org/scripts/script.php?script_id=42
-"       Makes it easy to switch between buffers:
-"           info -> :help bufExplorer
 "
 "     > yankring.vim - http://www.vim.org/scripts/script.php?script_id=1234
 "       Emacs's killring, useful when using the clipboard:
@@ -68,51 +71,37 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
+let mapleader   = ","
 let g:mapleader = ","
 
-" Fast saving
-nmap <leader>w :w!<cr>
-
-" Fast editing of the .vimrc
-map <leader>e :e! ~/.vimrc<cr>
+nmap <leader>w : w!<cr>
+map <leader>e  : e! ~/.vimrc<cr>
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
-
+autocmd! bufwritepost .vimrc source ~/.vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the curors - when moving vertical..
-set so=7
-
-set wildmenu "Turn on WiLd menu
-
-set ruler "Always show current position
-
-set cmdheight=2 "The commandbar height
-
-set hid "Change buffer - without saving
+set so=7                       " Set 7 lines to the curors - when moving vertical..
+set wildmenu                   " Turn on WiLd menu
+set ruler                      " Always show current position
+set cmdheight=1                " The commandbar height
+set hid                        " Change buffer - without saving
 
 " Set backspace config
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-set ignorecase "Ignore case when searching
+" Search
+set ignorecase                 " Ignore case when searching
 set smartcase
-
-set hlsearch "Highlight search things
-
-set incsearch "Make search act like search in modern browsers
-set nolazyredraw "Don't redraw while executing macros 
-
-set magic "Set magic on, for regular expressions
-
-set showmatch "Show matching bracets when text indicator is over them
-set mat=2 "How many tenths of a second to blink
+set hlsearch                   " Highlight search things
+set incsearch                  " Make search act like search in modern browsers
+set nolazyredraw
+set magic                      " Set magic on, for regular expressions
+set showmatch                  " Show matching bracets when text indicator is over them
+set mat=2                      " How many tenths of a second to blink
 
 " No sound on errors
 set noerrorbells
@@ -170,7 +159,6 @@ try
 catch
 endtry
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -182,9 +170,9 @@ set smarttab
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set nowrap "Wrap lines
+set ai     " Auto indent
+set si     " Smart indent
+set nowrap " Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -199,14 +187,7 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 vnoremap <silent> gv :call VisualSearch('gv')<CR>
 map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
-
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction 
-
-" From an idea by Michael Naumann
+" from an idea by michael naumann
 function! VisualSearch(direction) range
     let l:saved_reg = @"
     execute "normal! vgvy"
@@ -242,20 +223,11 @@ cno $q <C-\>eDeleteTillSlash()<cr>
 " map select all text to C-A
 noremap <C-A> ggVG
 
-" Bash like keys for the command line
-cnoremap <C-A>		<Home>
-cnoremap <C-E>		<End>
-cnoremap <C-K>		<C-U>
-
-cnoremap <C-P> <Up>
-cnoremap <C-N> <Down>
-
 " Useful on some European keyboards
 map ½ $
 imap ½ $
 vmap ½ $
 cmap ½ $
-
 
 func! Cwd()
   let cwd = getcwd()
@@ -356,9 +328,8 @@ set laststatus=2
 " Format the statusline
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
-
 function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
     return curdir
 endfunction
 
@@ -369,15 +340,13 @@ function! HasPaste()
         return ''
     endif
 endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket expanding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
 vnoremap $2 <esc>`>a]<esc>`<i[<esc>
 vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $4 <esc>`>a"<esc>`<i"<esc>
 vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
@@ -390,13 +359,6 @@ inoremap $q ''<esc>i
 inoremap $e ""<esc>i
 inoremap $t <><esc>i
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Abbrevs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -408,15 +370,6 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-try
-    if MySys() == "mac"
-        nmap <D-j> <M-j>
-        nmap <D-k> <M-k>
-        vmap <D-j> <M-j>
-        vmap <D-k> <M-k>
-    endif
-catch
-endtry
 
 "Delete trailing white space, useful for Python ;)
 func! DeleteTrailingWS()
@@ -428,7 +381,6 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 
 set guitablabel=%t
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -439,12 +391,9 @@ map <leader>p :cp<cr>
 
 
 """"""""""""""""""""""""""""""
-" => bufExplorer plugin
+" => NERDTree plugin
 """"""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-map <leader>o :BufExplorer<cr>
-
+map <leader>o :NERDTreeToggle<cr>
 
 """"""""""""""""""""""""""""""
 " => Minibuffer plugin
@@ -463,6 +412,24 @@ autocmd BufRead,BufNew :call UMiniBufExplorer
 
 map <leader>u :TMiniBufExplorer<cr>
 
+""""""""""""""""""""""""""""""
+" => Yankring blugin
+""""""""""""""""""""""""""""""
+nnoremap <silent> <F11> :YRShow<CR>
+
+""""""""""""""""""""""""""""""
+" => MRU blugin
+""""""""""""""""""""""""""""""
+let MRU_Max_Entries = 400
+map <leader>r :MRU<CR>
+
+""""""""""""""""""""""""""""""
+" => Command-T
+""""""""""""""""""""""""""""""
+let g:CommandTMaxHeight = 15
+set wildignore+=*.o,*.obj,.git,*.pyc
+noremap <leader>j :CommandT<cr>
+noremap <leader>y :CommandTFlush<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
@@ -527,28 +494,12 @@ function! JavaScriptFold()
 endfunction
 
 
-""""""""""""""""""""""""""""""
-" => MRU blugin
-""""""""""""""""""""""""""""""
-let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
-
-
-""""""""""""""""""""""""""""""
-" => Command-T
-""""""""""""""""""""""""""""""
-let g:CommandTMaxHeight = 15
-set wildignore+=*.o,*.obj,.git,*.pyc
-noremap <leader>j :CommandT<cr>
-noremap <leader>y :CommandTFlush<cr>
-
 
 """"""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -560,7 +511,5 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
 au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===========================================
-
 map <leader>pp :setlocal paste!<cr>
-
 map <leader>bb :cd ..<cr>

@@ -26,10 +26,10 @@ syndaemon -t -i 2 &
 
 # Dropbox
 (sleep 300 && dropboxd) &
-
+ 
 # Status script for dwm
 bat(){
-    ac="$(acpi -V | awk '{ gsub(/,/, "");} NR==1 {print $4}')"
+    ac="$(acpi -V | awk '{ gsub(/,/, "");} NR==1 {print $3}')"
     onl="$(grep "on-line" <(acpi -V))"
          if [ -n $onl ]; then 
          echo -e "BAT \x03$ac\x01"
@@ -82,7 +82,7 @@ int(){
      }
 
 dte(){
-     dte="$(date "+ %a %d|%b %R")"
+     dte="$(date "+ %a %d|%b %r")"
      echo -e "\x08$dte\x01"
      }
 
@@ -90,7 +90,7 @@ dte(){
 
 # DWM status
 while true; do
-    xsetroot -name "[$(bat)] [$(cpu) $(mem)] [$(hdd)] [EML $(eml) PAC $(pac)] [NET $(int)] $(dte) "
+    xsetroot -name "[$(bat)] [$(cpu) $(mem)] [$(hdd)] [PAC $(pac)] [NET $(int)] $(dte) "
 done &
 exec dwm
 
