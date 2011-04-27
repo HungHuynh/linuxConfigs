@@ -10,6 +10,9 @@ urxvtd -q -f -o &
 #xscreensaver 
 xscreensaver -no-splash &
 
+#conky 
+sleep 2 && conky &
+
 #wallpaper random
 while true
 do

@@ -118,10 +118,10 @@ syntax enable "Enable syntax hl
 " Set font according to system
 
 if has("gui_running")
-  set guioptions-=T
+  set guioptions-=mT
   set t_Co=256
   set background=dark
-  colorscheme peaksea
+  colorscheme miromiro
   set nonu
 else
   colorscheme zellner

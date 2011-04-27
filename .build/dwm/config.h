@@ -65,7 +65,7 @@ static const char *browser[]       = { "jumanji", NULL };
 static const char *pidgin[]        = { "pidgin", NULL };
 static const char *gimp[]          = { "gimp", NULL };
 static const char *music[]         = { "ncmpcpp", NULL };
-static const char *unikey[]        = { "ibus-daemon", NULL };
+static const char *ibus[]        = { "ibus-daemon", NULL };
 static const char *RaiseVolume[]   = { "amixer set Master 5%+", NULL };
 static const char *LowerVolume[]   = { "amixer set Master 5%-", NULL };
 static const char *volumeToggle[]  = { "amixer set Master toggle", NULL };
@@ -76,13 +76,13 @@ static const char *padcmd[]        = { "urxvtc", "-title", "pad", "-geometry", "
 static Key keys[] = {
     /* modifier                     key        function        argument */
         // applications
-    { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
+    { MODKEY,                       XK_space,         spawn,          {.v = dmenucmd } },
     { Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
     { Mod4Mask,                     XK_b,      spawn,          {.v = browser} },
     { Mod4Mask,                     XK_c,      spawn,          {.v = pidgin} },
     { Mod4Mask,                     XK_g,      spawn,          {.v = gimp} },
     { Mod4Mask,                     XK_m,      spawn,          {.v = music} },
-    { Mod4Mask,                     XK_u,      spawn,          {.v = unikey} },
+    { Mod4Mask,                     XK_i,      spawn,          {.v = ibus} },
     { Mod4Mask,                     XK_p,      spawn,          {.v = padcmd} },
         // multimedia
     { 0,            XF86XK_AudioRaiseVolume,      spawn,          {.v = RaiseVolume} },

@@ -18,7 +18,6 @@ alias dotfiles='cd /ntfs-data/.dotFiles/'
 #Sett File Edit
 alias update='yaourt -Syu'
 alias clean='pacman -Rsn $(pacman -Qdtq)'
-alias ls='ls --color=auto -h'
 alias bashrc='vim ~/.bashrc && source ~/.bashrc'
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias rm='rm -r'
@@ -38,23 +37,29 @@ alias build='~/.build/'
 alias webcode='cd /opt/lampp/htdocs'
 alias dev='cd /ntfs-data/Dropbox/dev/'
 
-#Application
+#Tweak application default running mode
+alias scrot='scrot -q100'
 alias urxvt='urxvtc&'
 alias gimp='gimp&exit'
 alias pidg='pidgin&'
 alias achrome='chromium-dev&exit'
 alias airc='irssi -n nXqd -w qungdung -c irc.freenode.net'
 alias mpd='mpd ~/.mpdconf'
-alias amusic='mpd;mpdscribble;ncmpcpp'
 alias amplayer='mplayer -utf8'
-alias aam90='amixer set Master 70%'
-alias aam70='amixer set Master 50%'
-alias aam100='amixer set Master 100%'
 alias adef="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
 alias asynonym="sdcv -u Moby\ Thesaurus\ II"
 alias apc="python2 ~/.scripts/ideone.py"
+
+#Function
 alias awpa='wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf;ifconfig wlan0 192.168.1.7;route add default gw 192.168.1.1;'
 alias make_dwm='makepkg -g --asroot >> PKGBUILD;makepkg -efi --asroot'
+alias shutdown='shutdown -h now'
+alias amusic='mpd;mpdscribble;ncmpcpp'
+alias aam90='amixer set Master 70%'
+alias aam70='amixer set Master 50%'
+alias aam100='amixer set Master 100%'
+alias fsize="printf '\33]50;%s%d\007' "xft:Monaco:pixelsize="" 
+
 #Editor
 alias vi='vim'
 alias v='vim'
@@ -63,4 +68,3 @@ alias ..='cd ..'
 alias ~='cd ~'
 #Misc
 alias go='startx'
-alias shutdown='shutdown -h now'
