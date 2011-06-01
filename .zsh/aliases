@@ -46,7 +46,7 @@ alias achrome='chromium-dev&exit'
 alias airc='irssi -n nXqd -w qungdung -c irc.freenode.net'
 alias mpd='mpd ~/.mpdconf'
 alias amplayer='mplayer -utf8'
-alias adef="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
+alias def="sdcv -u Oxford\ Advanced\ Learner\'s\ Dictionary"
 alias asynonym="sdcv -u Moby\ Thesaurus\ II"
 alias apc="python2 ~/.scripts/ideone.py"
 
