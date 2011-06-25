@@ -1,1 +1,0 @@
-/root/.build/dwm/config.h
