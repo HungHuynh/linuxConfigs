@@ -1,0 +1,1019 @@
+info_begin
+format: 1
+mpd_version: 0.16.3
+fs_charset: UTF-8
+tag: Artist
+tag: ArtistSort
+tag: Album
+tag: AlbumArtist
+tag: AlbumArtistSort
+tag: Title
+tag: Track
+tag: Name
+tag: Genre
+tag: Date
+tag: Composer
+tag: Performer
+tag: Disc
+tag: MUSICBRAINZ_ARTISTID
+tag: MUSICBRAINZ_ALBUMID
+tag: MUSICBRAINZ_ALBUMARTISTID
+tag: MUSICBRAINZ_TRACKID
+info_end
+directory: en
+mtime: 1309188499
+begin: en
+song_begin: 50 Cent - In Da Club.mp3
+Time: 194
+Artist: 50 Cent
+Title: In Da Club
+mtime: 1307781106
+song_end
+song_begin: Akeboshi - Wind.mp3
+Time: 222
+Artist: Akeboshi
+Title: Wind
+Date: 2002
+Genre: Other
+mtime: 1307781106
+song_end
+song_begin: Ann Wilson - La La Love On My Mind.mp3
+Time: 178
+Artist: Ann Wilson
+Title: La La Love On My Mind
+mtime: 1307781106
+song_end
+song_begin: Anya Marina - Whatever You Like (Single Version).mp3
+Time: 229
+Artist: Anya Marina
+Title: Whatever You Like (Single Version)
+Date: 2009
+Genre: Rock/Pop/Metal
+mtime: 1307781106
+song_end
+song_begin: Aqua - Doctor Jone.mp3
+Time: 310
+Artist: Aqua
+Title: Doctor Jone
+mtime: 1307781106
+song_end
+song_begin: Brad Garrett, Jeffrey Tambor, Mandy Moore, Zachary Levi & The Thug Chorus - I've Got A Dream.mp3
+Time: 191
+Artist: Brad Garrett, Jeffrey Tambor, Mandy Moore, Zachary Levi & The Thug Chorus
+Title: I've Got A Dream
+Date: 2010-11-16
+Genre: Soundtrack
+Composer: Alan Menken
+mtime: 1307781106
+song_end
+song_begin: Bruno Mars - The Lazy Song.mp3
+Time: 196
+mtime: 1307781106
+song_end
+song_begin: Cher - Welcome To Burlesque.mp3
+Time: 168
+Artist: Cher
+Title: Welcome To Burlesque
+Date: 2010
+Genre: Pop
+Composer: Charlie Midnight/John Patrick Shanley/Matthew Gerrard/Steve Lindsey
+mtime: 1307781106
+song_end
+song_begin: Christina Aguilera - Show Me How You Burlesque.mp3
+Time: 183
+Artist: Christina Aguilera
+Title: Show Me How You Burlesque
+Date: 2010
+Genre: Pop
+Composer: C. "Tricky" Stewart/Christina Aguilera/Claude Kelly
+mtime: 1307781106
+song_end
+song_begin: Christina Aguilera - You Lost Me.mp3
+Time: 258
+Artist: Christina Aguilera
+Title: You Lost Me
+Date: 2010
+Genre: Other
+mtime: 1307781106
+song_end
+song_begin: David Cook - The Last Goodbye.mp3
+Time: 180
+Artist: David Cook
+Title: The Last Goodbye
+mtime: 1307781106
+song_end
+song_begin: Diddy-Dirty Money - I'm coming home.mp3
+Time: 240
+mtime: 1308072582
+song_end
+song_begin: Eminem - Eminem Ft 50 Cent & Dr.Dre - Encore(one last time).mp3
+Time: 311
+Artist: Eminem
+Title: Eminem Ft 50 Cent & Dr.Dre - Encore(one last time)
+Date: 2004
+Genre: Rap
+Composer: A. Young/C. Pope/Curtis Jackson/Mark Batson/Marshall Mathers/Mike Elizondo
+mtime: 1307781106
+song_end
+song_begin: Engelbert Humperdinck - Quando Quando Quando.mp3
+Time: 200
+Artist: Engelbert Humperdinck
+Title: Quando Quando Quando
+Date: 2004
+Genre: Oldies
+Composer: Alberto Testa/Tony Renis
+mtime: 1307781106
+song_end
+song_begin: Enrique Iglesias - Hero.mp3
+Time: 265
+Artist: Enrique Iglesias
+Title: Hero.
+mtime: 1307781106
+song_end
+song_begin: Fall Out Boy - I Don't Care.mp3
+Time: 215
+mtime: 1308484717
+song_end
+song_begin: Fall Out Boy - Thanks For The Memories.mp3
+Time: 204
+mtime: 1307781106
+song_end
+song_begin: Fall Out Boy,John Mayer - Beat It.mp3
+Time: 230
+Artist: Fall Out Boy,John Mayer
+Title: Beat It
+mtime: 1307781106
+song_end
+song_begin: Fast Lane - Bad Meets Evil.mp3
+Time: 253
+mtime: 1307969692
+song_end
+song_begin: Guns N' Roses - Since I Don't Have You.mp3
+Time: 259
+Artist: Guns N' Roses
+Title: Since I Don't Have You
+Date: 1993
+Genre: Rock
+Composer: Joe Rock/Lennie Martin
+mtime: 1307781106
+song_end
+song_begin: Guns N' Roses - Sweet Child O' Mine.mp3
+Time: 356
+Artist: Guns N' Roses
+Title: Sweet Child O' Mine
+Date: 1987
+Genre: Rock
+Composer: Guns N' Roses
+mtime: 1307781106
+song_end
+song_begin: Its My Life - Bon Jovi.mp3
+Time: 225
+mtime: 1306118072
+song_end
+song_begin: J-Ivanovici - Danube Waves.mp3
+Time: 45
+mtime: 1307781106
+song_end
+song_begin: Jack Johnson - Good People.mp3
+Time: 209
+mtime: 1307781106
+song_end
+song_begin: Jadakiss_Jennifer Lopez_Styles P - Jenny from the Block.mp3
+Time: 187
+Artist: Jadakiss/Jennifer Lopez/Styles P
+Title: Jenny from the Block
+Date: 2002
+Genre: Blues
+Composer: Jean Claude "Poke" Olivier/Jennifer Lopez/L. Parker/Miro, Jose Fernando Arbex/Mr. Deyo/Samuel Barnes/Sterlin/Troy Oliver
+mtime: 1307781106
+song_end
+song_begin: Jennifer Lopez - Love Don't Cost A Thing.mp3
+Time: 223
+Artist: Jennifer Lopez
+Title: Love Don't Cost A Thing
+Date: 2001
+Genre: Pop
+Composer: Amille Harris/Damon Sharpe/Georgette Franklin/Greg Lawson/Jeremy Monroe
+mtime: 1307781106
+song_end
+song_begin: Jennifer Lopez - No Me Ames.mp3
+Time: 279
+Artist: Jennifer Lopez
+Title: No Me Ames
+Date: 1999
+Genre: R&B
+Composer: Aleandro Baldi/Giancarlo Bigazzi/Ignacio Ballesteros/Marco Falagiani
+mtime: 1307781106
+song_end
+song_begin: Justin Timberlake - Girldfriend (Feat. Nelly).mp3
+Time: 286
+Artist: Justin Timberlake
+Title: Girldfriend (Feat. Nelly)
+Date: 2007
+Genre: Dance
+Composer: Chad Hugo/Cornell Haynes/Justin Timberlake/Pharrell Williams
+mtime: 1307781106
+song_end
+song_begin: Kaya Kaya - C'est si Bon.mp3
+Time: 196
+Artist: Kaya Kaya
+Genre: Japanese Japanese
+mtime: 1307781106
+song_end
+song_begin: Kaya Kaya - Je te Veux.mp3
+Time: 219
+Artist: Kaya Kaya
+Genre: Japanese Japanese
+mtime: 1307781106
+song_end
+song_begin: Kaya Kaya - La Vie en Rose.mp3
+Time: 248
+Artist: Kaya Kaya
+Genre: Japanese Japanese
+mtime: 1307781106
+song_end
+song_begin: Kenny Rogers - Lady.mp3
+Time: 236
+Artist: Kenny Rogers
+Title: Lady
+Date: 2008
+Genre: Country
+Composer: Lionel Richie
+mtime: 1307781106
+song_end
+song_begin: Lydia Gray - Sorry Seems to Be the HardestWord.mp3
+Time: 221
+Artist: Lydia Gray
+Title: Sorry Seems to Be the HardestWord
+Date: 2007
+Genre: Vocal
+Composer: Bernie Taupin/Elton John
+mtime: 1307781106
+song_end
+song_begin: MAROON 5 - IF I NEVER SEE YOUR FACE AGAIN.mp3
+Time: 201
+Artist: MAROON 5
+Title: IF I NEVER SEE YOUR FACE AGAIN
+Date: 2007
+mtime: 1307781106
+song_end
+song_begin: Mandy Moore - When Will My Life Begin_.mp3
+Time: 152
+Artist: Mandy Moore
+Title: When Will My Life Begin?
+Date: 2010-11-16
+Genre: Soundtrack
+Composer: Alan Menken
+mtime: 1307781106
+song_end
+song_begin: Maroon 5 - Misery.mp3
+Time: 208
+Artist: Maroon 5
+Title: Misery
+Date: 2010
+Genre: Pop
+Composer: Adam Levine/Jesse Carmichael/Sam Farrar
+mtime: 1307781106
+song_end
+song_begin: Maroon 5 - Secret.mp3
+Time: 295
+Artist: Maroon 5
+Title: Secret
+Date: 2002
+Genre: Other
+Composer: Adam Levine/Jesse Carmichael
+mtime: 1307781106
+song_end
+song_begin: Maroon 5 - Wake Up Call.mp3
+Time: 201
+Artist: Maroon 5
+Title: Wake Up Call
+Date: 2007-05-22
+Genre: Pop
+mtime: 1307781106
+song_end
+song_begin: Metallica - One.mp3
+Time: 444
+Artist: Metallica
+Title: One
+Genre: Other
+mtime: 1307781106
+song_end
+song_begin: Metallica - nothing else matters.mp3
+Time: 392
+Artist: Metallica
+Title: nothing else matters
+Date: 1997
+Genre: Metal
+mtime: 1307781106
+song_end
+song_begin: Michael Jackson - Billie Jean.mp3
+Time: 294
+Artist: Michael Jackson
+Title: Billie Jean
+Date: 2004
+Genre: Pop
+Composer: Michael Jackson
+mtime: 1307781106
+song_end
+song_begin: Mika - Big Girl (You Are Beautiful).mp3
+Time: 248
+Artist: Mika
+Title: Big Girl (You Are Beautiful)
+mtime: 1307781106
+song_end
+song_begin: Mika - Grace Kelly.mp3
+Time: 190
+Artist: Mika
+Title: Grace Kelly
+mtime: 1308072146
+song_end
+song_begin: Mika - We Are Golden.mp3
+Time: 213
+Artist: Mika
+Title: We Are Golden
+mtime: 1308086422
+song_end
+song_begin: Mike Posner - Cooler Than Me.mp3
+Time: 215
+Artist: Mike Posner
+Title: Cooler Than Me
+Date: 2010
+Genre: Dance / Pop
+mtime: 1307781106
+song_end
+song_begin: Natasha Bedingfield - Unwritten.mp3
+Time: 260
+mtime: 1307866198
+song_end
+song_begin: Nelly Furtado - All Good Things (Come To An End).mp3
+Time: 371
+Artist: Nelly Furtado
+Title: All Good Things (Come To An End)
+mtime: 1307781106
+song_end
+song_begin: One Republic - Secrets.mp3
+Time: 215
+mtime: 1308484123
+song_end
+song_begin: Red Hot Chili Peppers - Hey.mp3
+Time: 340
+Artist: Red Hot Chili Peppers
+Title: Hey
+Date: 2006
+Genre: Metal
+Composer: Anthony Kiedis/Chad Smith/Flea/John Frusciante
+mtime: 1307781106
+song_end
+song_begin: Santana - Science Fiction Double Feature.mp3
+Time: 270
+Artist: Santana
+Title: Science Fiction Double Feature
+Date: 2010-10-19
+Genre: Soundtrack
+Composer: Richard O'Brien
+mtime: 1307781106
+song_end
+song_begin: Sarah Connor - Just One Last Dance.mp3
+Time: 269
+Artist: Sarah Connor
+Title: Just One Last Dance
+Date: 2004
+Genre: Soul and R&B
+Composer: Kay Denar/Rob Tyger
+mtime: 1307781106
+song_end
+song_begin: Scotty McCreery - I Love You This Big.mp3
+Time: 247
+Artist: Scotty McCreery
+Title: I Love You This Big
+Date: 2011
+mtime: 1307780968
+song_end
+song_begin: Seal Seal - Kiss From A Rose.mp3
+Time: 288
+Artist: Seal Seal
+Genre: Soul Soul
+mtime: 1307781106
+song_end
+song_begin: Sebastian - Kiss The Girl.mp3
+Time: 160
+Artist: Sebastian
+Title: Kiss The Girl
+Date: 1989
+Genre: Soundtrack
+Composer: Alan Menken/Howard Ashman
+mtime: 1307781106
+song_end
+song_begin: Taio Cruz - Dynamite.mp3
+Time: 204
+mtime: 1308072570
+song_end
+song_begin: The Black Eyed Peas - I Gotta Feeling.mp3
+Time: 289
+Artist: The Black Eyed Peas
+Title: I Gotta Feeling
+mtime: 1307781106
+song_end
+song_begin: This love - This Love.mp3
+Time: 267
+Artist: This love
+Title: This Love
+Date: 2002
+Genre: genre
+mtime: 1307781106
+song_end
+song_begin: Turtles - Happy Together.mp3
+Time: 178
+Artist: Turtles
+Title: Happy Together
+Date: 1999
+Genre: Oldies
+mtime: 1307781106
+song_end
+song_begin: Various Artists - QUENN - WE ARE THE CHAMPIONS.mp3
+Time: 184
+Artist: Various Artists
+Title: QUENN - WE ARE THE CHAMPIONS
+Date: 1994
+Genre: Other
+mtime: 1307781106
+song_end
+song_begin: Westlife - The Reason.mp3
+Time: 234
+Artist: Westlife
+Title: The Reason
+Date: 2010
+Genre: Pop
+mtime: 1307781106
+song_end
+song_begin: 샤이니(SHINee) - Hello.mp3
+Time: 183
+Artist: 샤이니(SHINee)
+Title: Hello
+Date: 2010
+Genre: Pop
+mtime: 1307781106
+song_end
+song_begin: Sara Bareilles - Love Song.mp3
+Time: 234
+Artist: Sara Bareilles
+Title: Love Song
+Album: 2009 Grammy Nominees
+Date: 2009
+Genre: Pop
+mtime: 1307898126
+song_end
+song_begin: Mika - Big Girl.mp3
+Time: 189
+Artist: Mika
+Title: Big Girl
+Album: Hitclub 2008 Volume 1
+Date: 2008-00-00
+Genre: Top 40
+mtime: 1308073132
+song_end
+song_begin: Lenka - Trouble Is A Friend.mp3
+Time: 216
+Artist: Lenka
+Title: Trouble Is A Friend
+Album: Lenka
+Track: /11
+Date: 2008-09-23
+Genre: Pop
+mtime: 1308070478
+song_end
+song_begin: Khac Viet- Nam Cuong - Kho.mp3
+Time: 240
+Artist: Khac Viet, Nam Cuong
+Title: Kho
+Album: NhacCuaTui.Com
+Track: 1412
+Genre: Nhac Tre
+mtime: 1308778326
+song_end
+song_begin: One Republic - Stop And Stare.mp3
+Time: 224
+Artist: OneRepublic
+Title: Stop & Stare
+Album: OneRepublic
+Track: 3
+Date: 2007
+mtime: 1308483754
+song_end
+song_begin: P!NK - Raise Your Glass.mp3
+Time: 203
+Artist: P!nk
+AlbumArtist: P!nk
+Title: Raise Your Glass
+Album: Raise Your Glass - Single
+Track: 1/1
+Date: 2010
+Genre: Pop
+Disc: 1/1
+mtime: 1308649433
+song_end
+song_begin: The Killers - Mr Brightside.mp3
+Time: 225
+Artist: The Killers
+Title: Mr. Brightside
+Album: The Killers - Greatest Hits CD1
+Track: 2
+mtime: 1308649409
+song_end
+song_begin: Westlife - How to Break a Heart.mp3
+Time: 244
+Artist: Westlife
+Title: How to Break a Heart
+Album: Where We Are
+Date: 2009
+Genre: Pop
+mtime: 1308089708
+song_end
+song_begin: Westlife - What About Now.mp3
+Time: 251
+Artist: Westlife
+Title: What About Now
+Album: Where We Are
+Date: 2009
+Genre: Pop
+mtime: 1308089646
+song_end
+song_begin: A Little Too Not Over You - David Archuleta.mp3
+Time: 198
+Artist: David Archuleta
+Title: A Little Too Not Over You
+Album: mp3.zing.vn
+mtime: 1308313168
+song_end
+song_begin: Britney Spears - Autumn Goodbye.mp3
+Time: 221
+Artist: Britney Spears
+Title: Autumn Goodbye
+Album: mp3.zing.vn
+mtime: 1309181721
+song_end
+song_begin: Come Back To Me - Utada Hikaru.mp3
+Time: 238
+Artist: Utada Hikaru
+Title: Come Back To Me
+Album: mp3.zing.vn
+mtime: 1308314248
+song_end
+song_begin: David Cook - The Time Of My Life.mp3
+Time: 216
+Artist: David Cook
+Title: The Time Of My Life
+Album: mp3.zing.vn
+mtime: 1308313846
+song_end
+song_begin: Fall Out Boy - This Ain't A Scene, It's An Arms Race.mp3
+Time: 213
+Artist: Fall Out Boy
+Title: This Aint
+Album: mp3.zing.vn
+mtime: 1308484329
+song_end
+song_begin: Fall Out Boy - Thnks Fr Th Mmrs.mp3
+Time: 204
+Artist: Fall Out Boy
+Title: Thnks Fr Th Mmrs
+Album: mp3.zing.vn
+mtime: 1308484593
+song_end
+song_begin: Helloween - If I Could Fly.mp3
+Time: 209
+Artist: Helloween
+Title: If I Could Fly
+Album: mp3.zing.vn
+mtime: 1308341378
+song_end
+song_begin: Lenka - Heart Skips A Beat.mp3
+Time: 202
+Artist: Lenka
+Title: Heart Skips A Beat
+Album: mp3.zing.vn
+mtime: 1308315957
+song_end
+song_begin: Ne-Yo - So Sick.mp3
+Time: 209
+Artist: Ne-Yo
+Title: So Sick
+Album: mp3.zing.vn
+mtime: 1308216404
+song_end
+song_begin: OneRepublic - Apologize.mp3
+Time: 208
+Artist: OneRepublic
+Title: Apologize
+Album: mp3.zing.vn
+mtime: 1308186146
+song_end
+song_begin: Over It - Katharine McPhee.mp3
+Time: 215
+Artist: Katharine McPhee
+Title: Over It
+Album: mp3.zing.vn
+mtime: 1305680840
+song_end
+song_begin: Utada Hikaru - First Love.mp3
+Time: 255
+Artist: Utada Hikaru
+Title: First Love
+Album: mp3.zing.vn
+mtime: 1308314388
+song_end
+end: en
+directory: epic
+mtime: 1307783411
+begin: epic
+song_begin: Beethoven Virus - Beethoven.mp3
+Time: 100
+Artist: Beethoven
+Title: Beethoven Virus
+mtime: 1306147664
+song_end
+song_begin: Globus - Europa.mp3
+Time: 248
+Artist: Europa
+Title: Globus
+mtime: 1305927526
+song_end
+song_begin: Immunize - Pendulum.mp3
+Time: 277
+Artist: Pendulum
+Title: Immunize
+mtime: 1307097892
+song_end
+song_begin: Witchcraft - PENDULUM .mp3
+Time: 253
+Title: Witchcraft - PENDULUM
+mtime: 1307097534
+song_end
+song_begin: Watercolour - Pendulum.mp3
+Time: 211
+Artist: Pendulum
+AlbumArtist: Various Artists
+Title: WaterColor
+Track: 46
+Date: 2010
+Genre: Electronic Rock
+mtime: 1307782131
+song_end
+song_begin: Fasten Your Seatbelt - Pendulum.mp3
+Time: 398
+Artist: Pendulum
+Title: Fasten Your Seatbelt - Freestylers, Pendulum
+Album: Hold Your Colour
+Date: 2005
+mtime: 1307098068
+song_end
+song_begin: Slam - Pendulum.mp3
+Time: 345
+Artist: Pendulum
+Title: Slam
+Album: Hold Your Colour
+Date: 2005
+mtime: 1307097808
+song_end
+end: epic
+directory: kor
+mtime: 1308863280
+begin: kor
+song_begin: - Like Being Crazy.mp3
+Time: 171
+mtime: 1302275432
+song_end
+song_begin: 2AM - Can't Let You Go Even If I Die.mp3
+Time: 194
+Artist: 2AM
+Title: Can't Let You go Even If I die
+mtime: 1307781198
+song_end
+song_begin: 2NE1 - I Don't Care.mp3
+Time: 239
+mtime: 1307964599
+song_end
+song_begin: Wonder Boy - Super Junior.mp3
+Time: 197
+mtime: 1306117575
+song_end
+song_begin: Love Pain - FT Island.mp3
+Time: 244
+Artist: P p D| \ (FT Island)
+Title: , St(u\)
+Album: 2nd Live Concert : Rock Prince
+Track: 14
+Date: 2009
+Genre:  |\ (Ballad)
+mtime: 1307838174
+song_end
+song_begin: Spontania feat. JUJU.mp3
+Time: 269
+Artist: Spontania feat.JUJU
+Title: ¾ý¤Î¤¹¤Ù¤Æ¤Ë
+Album: ¾ý¤Î¤¹¤Ù¤Æ¤Ë
+Track: 1
+Date: 2008
+mtime: 1288684387
+song_end
+song_begin: Beast B2ST - Fiction.mp3
+Time: 235
+Artist: Beast (B2ST)
+Title: Fiction
+Album: NhacCuaTui.Com
+Track: 1412
+Date: 2011
+Genre: Nhac Han Quoc
+mtime: 1308778220
+song_end
+song_begin: Intuition - CN Blue.mp3
+Time: 222
+Artist: CN Blue
+Title: Intuition
+Album: NhacCuaTui.Com
+Track: 1412
+Date: 2011
+Genre: Nhac Han Quoc
+mtime: 1303725732
+song_end
+song_begin: Stupid Liar - Big Bang.mp3
+Time: 235
+Artist: Big Bang
+Title: Stupid Liar
+Album: NhacCuaTui.Com
+Track: 1412
+Date: 2011
+Genre: Nhac Han Quoc
+mtime: 1307189687
+song_end
+song_begin: Dreaming - Kim Soo Hyun.mp3
+Time: 222
+Artist: Kim Soo Hyun
+Title: Dreaming
+Album: mp3.zing.vn
+mtime: 1307799896
+song_end
+song_begin: Golden Lady - Lim Jeong-Hee ft. Hyuna.mp3
+Time: 220
+Artist: Lim Jeong-Hee,Hyuna
+Title: Golden Lady
+Album: mp3.zing.vn
+mtime: 1307798865
+song_end
+song_begin: Hello Hello - FT Island.mp3
+Time: 196
+Artist: FT Island
+Title: Hello Hello
+Album: mp3.zing.vn
+mtime: 1307364961
+song_end
+song_begin: Lonely - 2NE1.mp3
+Time: 208
+Artist: 2NE1
+Title: Lonely
+Album: mp3.zing.vn
+mtime: 1307965589
+song_end
+song_begin: Love Song - Big Bang.mp3
+Time: 224
+Artist: Big Bang
+Title: Love Song
+Album: mp3.zing.vn
+mtime: 1307898245
+song_end
+song_begin: You’re So Cool To Me - SeeYa.mp3
+Time: 230
+Artist: SeeYa
+Title: Youâre So Cool To Me
+Album: mp3.zing.vn
+mtime: 1307799188
+song_end
+end: kor
+directory: vi
+mtime: 1309543788
+begin: vi
+song_begin: Ung Dai Ve ft. Lil_ Knight - Anh Nho Em Nhieu.mp3
+Time: 283
+mtime: 1308823083
+song_end
+song_begin: Va Toi Cung Yeu Em - Le Hieu.mp3
+Time: 246
+Artist: Le Hieu
+Title: Va Toi Cung Yeu Em
+Performer: www.Nhac.vui.vn
+mtime: 1306124818
+song_end
+song_begin: Khac Viet- Nam Cuong - Kho.mp3
+Time: 240
+Artist: Khac Viet, Nam Cuong
+Title: Kho
+Album: NhacCuaTui.Com
+Track: 1412
+Genre: Nhac Tre
+mtime: 1308778326
+song_end
+song_begin:  Lil Shady ft. Shiver - Luc Yeu (Remix).mp3
+Time: 270
+Artist: Lil Shady,Shiver
+Title: Luc Yeu (Remix)
+Album: mp3.zing.vn
+mtime: 1305918510
+song_end
+song_begin: Bang Cuong ft. Khanh Phuong - Ton Tho Mot Tinh Yeu.mp3
+Time: 309
+Artist: Bang Cuong,Khanh Phuong
+Title: Ton Tho Mot Tinh Yeu
+Album: mp3.zing.vn
+mtime: 1308827238
+song_end
+song_begin: Bong Hong Thuy Tinh - Buc Tuong.mp3
+Time: 271
+Artist: Bá»©c TÆ°á»ng
+Title: BÃ´ng Há»ng Thá»§y Tinh
+Album: mp3.zing.vn
+mtime: 1308138838
+song_end
+song_begin: Cao Thai Son - Yeu Thuong Quay Ve.mp3
+Time: 262
+Artist: Cao Thái Sơn
+Title: Yêu thương quay về
+Album: mp3.zing.vn
+mtime: 1308829996
+song_end
+song_begin: Dem Cho Vo - Le Hieu.mp3
+Time: 267
+Artist: Le Hieu
+Title: Dem Cho Vo
+Album: mp3.zing.vn
+mtime: 1307297463
+song_end
+song_begin: Khac Viet - Chi Anh Hieu Em.mp3
+Time: 272
+Artist: Khac Viet
+Title: Chi Anh Hieu Em
+Album: mp3.zing.vn
+mtime: 1309534761
+song_end
+song_begin: Khoi My - La Con Gai That Tuyet.mp3
+Time: 218
+Artist: Khoi My
+Title: La Con Gai That Tuyet
+Album: mp3.zing.vn
+mtime: 1308316266
+song_end
+song_begin: Khong Tu Quynh - Voi Vang.mp3
+Time: 227
+Artist: Khong Tu Quynh
+Title: Voi Vang
+Album: mp3.zing.vn
+mtime: 1308829939
+song_end
+song_begin: Le Hieu - Chuyen Nhu The Day.mp3
+Time: 284
+Artist: Le Hieu
+Title: Chuyen Nhu The Day
+Album: mp3.zing.vn
+mtime: 1305200207
+song_end
+song_begin: Le Hieu - Con Duong Mau Xanh.mp3
+Time: 320
+Artist: LÃª Hiáº¿u
+Title: Con ÄÆ°á»ng MÃ u Xanh
+Album: mp3.zing.vn
+mtime: 1308832022
+song_end
+song_begin: Le Hieu - Ngay Mai Em Di.mp3
+Time: 267
+Artist: LÃª Hiáº¿u
+Title: NgÃ y Máº¡i Em Äi
+Album: mp3.zing.vn
+mtime: 1308832512
+song_end
+song_begin: Lenka - Heart Skips A Beat.mp3
+Time: 202
+Artist: Lenka
+Title: Heart Skips A Beat
+Album: mp3.zing.vn
+mtime: 1308315957
+song_end
+song_begin: Luu Huong Giang - Tam Biet.mp3
+Time: 216
+Artist: Luu Huong Giang
+Title: Tam Biet
+Album: mp3.zing.vn
+mtime: 1309181989
+song_end
+song_begin: Minh Hang ft. Tim - Canh Dong Tuyet.mp3
+Time: 266
+Artist: Minh Hang,Tim ((Cat Vu))
+Title: Canh Dong Tuyet
+Album: mp3.zing.vn
+mtime: 1308828305
+song_end
+song_begin: Nam Cuong - Kho.mp3
+Time: 236
+Artist: Nam Cuong
+Title: Kho
+Album: mp3.zing.vn
+mtime: 1308316550
+song_end
+song_begin: Nam Cuong ft. Khac Viet - Suy Nghi Trong Anh.mp3
+Time: 311
+Artist: Nam Cuong
+Title: Suy Nghi
+Album: mp3.zing.vn
+mtime: 1308315102
+song_end
+song_begin: Ngay Hom Qua - Buc Tuong.mp3
+Time: 291
+Artist: Bá»©c TÆ°á»ng
+Title: NgÃ y HÃ´m Qua
+Album: mp3.zing.vn
+mtime: 1308139566
+song_end
+song_begin: Ngo Kien Huy - Can Mot Nguoi Hieu.mp3
+Time: 253
+Artist: Ngo Kien Huy
+Title: Can Mot Nguoi Hieu
+Album: mp3.zing.vn
+mtime: 1308828917
+song_end
+song_begin: Ngo Kien Huy - Chuc Em Ngu Ngon.mp3
+Time: 327
+Artist: Ngo Kien Huy
+Title: Chuc Em Ngu Ngon
+Album: mp3.zing.vn
+mtime: 1308830636
+song_end
+song_begin: Nguyen Van Chung - Bai Hat Cua Mua.mp3
+Time: 288
+Artist: Nguyen Van Chung
+Title: Bai Hat Cua Mua
+Album: mp3.zing.vn
+mtime: 1308823993
+song_end
+song_begin: Nguyen Vu - Tu Khi Em Den.mp3
+Time: 254
+Artist: Nguyen Vu
+Title: Tu Khi Em Den
+Album: mp3.zing.vn
+mtime: 1305044398
+song_end
+song_begin: Noo Phuoc Thinh - Chi La Giac Mo.mp3
+Time: 254
+Artist: Noo PhÆ°á»c Thá»nh
+Title: Chá» LÃ  Giáº¥c MÆ¡
+Album: mp3.zing.vn
+mtime: 1308830429
+song_end
+song_begin: Noo Phuoc Thinh ft. Ho Ngoc Ha - Noi Nho Day Voi.mp3
+Time: 263
+Artist: Noo Phuoc Thinh,Ho Ngoc Ha
+Title: Noi Nho Day Voi
+Album: mp3.zing.vn
+mtime: 1305044434
+song_end
+song_begin: Phuong Anh - Chi Mot Minh Anh.mp3
+Time: 273
+Artist: Phuong Anh
+Title: Chi Mot Minh Anh
+Album: mp3.zing.vn
+mtime: 1308827563
+song_end
+song_begin: Rock Xuyen Man Dem - Buc Tuong.mp3
+Time: 226
+Artist: Bá»©c TÆ°á»ng
+Title: Rock XuyÃªn MÃ n ÄÃªm
+Album: mp3.zing.vn
+mtime: 1308139779
+song_end
+song_begin: The Men - Em Luon O Trong Tam Tri Anh.mp3
+Time: 268
+Artist: The Men
+Title: Em Luon O Trong Tam Tri Anh
+Album: mp3.zing.vn
+mtime: 1308314623
+song_end
+song_begin: The Men - Mot Loi Hua.mp3
+Time: 243
+Artist: The Men
+Title: Mot Loi Hua
+Album: mp3.zing.vn
+mtime: 1308314863
+song_end
+song_begin: Tim - Canh Chim Hai Au.mp3
+Time: 271
+Artist: Tim ((Cat Vu))
+Title: Canh Chim Hai Au
+Album: mp3.zing.vn
+mtime: 1308828010
+song_end
+song_begin: V.Music - Que Huong Toi.mp3
+Time: 246
+Artist: V.Music
+Title: Que Huong Toi
+Album: mp3.zing.vn
+mtime: 1305045952
+song_end
+end: vi
