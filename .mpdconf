@@ -1,0 +1,11 @@
+music_directory       "/ntfs-data/Dropbox/music"         # Your music dir.
+playlist_directory    "~/mpd/playlists"
+db_file               "~/mpd/mpd.db"
+log_file              "~/mpd/mpd.log"
+pid_file              "~/mpd/mpd.pid"
+state_file            "~/mpd/mpdstate"
+#user                  "mpd"
+# Binding to address and port causing problems in mpd-0.14.2 best to leave
+# commented.
+bind_to_address       "127.0.0.1"
+port                  "6600"
