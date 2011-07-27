@@ -4,7 +4,7 @@
 // #include "X11/F86kysym.h"
 
 /* appearance */
-static const char font[]   = "-*-dina-medium-r-normal-*-14-*-*-*-*-*-*-*";
+static const char font[]   = "-*-monaco-*-*-*-14-*-*-*-*-*-*-*-*";
 
 #define NUMCOLORS 8
 
@@ -26,14 +26,14 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "main", "term", "browser", "relax", "focus"};
+static const char *tags[] = { "term", "browser", "relax", "read"};
 
 static const Rule rules[] = {
-	/* class      		instance    	title       	tags mask     isfloating   monitor */
-	{ "Gimp",     		NULL,       	NULL,       	0,            True,        -1 },
-	{ "chromium-browser",   NULL,       	NULL,       	1 << 2,       False,       -1 },
-	{ "Mplayer",  		NULL,       	NULL,       	1 << 3,       True,        -1 },
-	{  NULL,         	NULL,      	"scratchpad",   0,            True,        -1 },
+    /* class                instance        title           tags mask     isfloating   monitor */
+    { "Gimp",               NULL,           NULL,           0,            True,        -1 },
+    { "chromium-browser",   NULL,           NULL,           1 << 2,       False,       -1 },
+    { "Mplayer",            NULL,           NULL,           1 << 3,       True,        -1 },
+    {  NULL,                NULL,           "scratchpad",   0,            True,        -1 },
 
 };
 
@@ -42,17 +42,17 @@ static const float mfact      = 0.55; /* factor of master area size [0.05..0.95]
 static const Bool resizehints = True; /* True means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+    /* symbol     arrange function */
+    { "[T]",      tile },    /* first entry is default */
+    { "[F]",      NULL },    /* no layout function means floating behavior */
+    { "[M]",      monocle },
 };
 
 /* key definitions */
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+    { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+    { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
@@ -60,17 +60,30 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char  *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
-static const char *termcmd[]  = { "urxvtc", NULL };
-static const char *padcmd[]   = { "urxvtc", "-title", "scratchpad", "-geometry", "54x10+504+12", NULL };
-// static const char *browsercmd[]   = SHCMD("exec chromium-browser --user-data-dir=~/.chromium";
+static const char *dmenucmd[]      = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
+static const char *termcmd[]        = { "urxvtc", NULL };
+static const char *padcmd[]         = { "urxvtc", "-title", "scratchpad", "-geometry", "54x10+504+12", NULL };
+static const char *soundMute[]      = { "amixer", "set", "Master", "toggle", NULL };
+static const char *soundUp[]        = { "amixer", "set", "Master", "10+", NULL };
+static const char *soundDown[]      = { "amixer", "set", "Master", "10-", NULL };
+static const char *soundNext[]      = { "ncmpcpp", "next", NULL };
+static const char *soundPrev[]      = { "amixer", "set", "Master", "10-", NULL };
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ Mod4Mask,             XK_Return, spawn,          {.v = termcmd } },
-	{ Mod4Mask, 	        	XK_p,      spawn,          {.v = padcmd } },
-	{ Mod4Mask, 	        	XK_b,      spawn,          SHCMD("exec chromium-browser --user-data-dir=.chromium;") },
+	{ Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
+	{ Mod4Mask,                     XK_p,      spawn,          {.v = padcmd } },
+    /* my own binding start */
+	{ Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser --user-data-dir=.chromium;") },
+    {      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 -t 25 '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f $m /ntfs-data/inbox/tmp/screenshots'") },
+    {      0,                       0x1008ff12,spawn,          {.v = soundMute } },
+    {      0,                       0x1008ff11,spawn,          {.v = soundDown } },
+    {      0,                       0x1008ff13,spawn,          {.v = soundUp } },
+    {      0,                       0x1008ff16,spawn,          {.v = soundPrev } },
+    {      0,                       0x1008ff17,spawn,          {.v = soundNext } },
+    /* my own binding end   */
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

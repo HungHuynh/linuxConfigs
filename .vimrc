@@ -1,6 +1,6 @@
 " Original author: amix.dk
 " Modified by nXqd
-" Update: 30/6/2011 4:17 AM
+" Update:
 "
 " Sections:
 "    -> General
@@ -14,27 +14,31 @@
 "    -> Statusline
 "    -> Parenthesis/bracket expanding
 "    -> Editing mappings
+"    -> Cope
+"    -> Spell Checking
 "
 "    -> Plugins
-"       -> Cope
 "       -> NERDTree plugin
 "       -> Minibuffer plugin
-"       -> MRU plugin
-"       -> Command-T plugin
+"       -> MRU
 "       -> Omni complete functions
 "       -> cTags plugins
+"       -> Omni Complete
+"       -> Matchit - extends % for various Languages
+"       -> AlignTabs
+"       -> php-doc
 "    -> Languages
 "       -> Python section
+"       -> PHP section
 "       -> JavaScript section
 "       -> HTML section
-"
-"
+"       -> CSS section
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Check if which os gvim runs
 let win = 0
 if has("win32")
@@ -62,10 +66,13 @@ nmap <leader>w : w!<cr>
 
 " When vimrc is edited, reload it
 if win
-    autocmd! bufwritepost _vimrc source D:\Dropbox\apps\gVimPortable\Data\settings\_vimrc
+    au! bufwritepost _vimrc source D:\Dropbox\apps\gVimPortable\Data\settings\_vimrc
 else
-    autocmd! bufwritepost .vimrc source ~/.vimrc
+    au! bufwritepost .vimrc source ~/.vimrc
 endif
+
+" Auto remove trailing spaces
+au BufWritePre * :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -105,10 +112,10 @@ syntax enable
 
 " Set font according to system
 if win
-   set gfn=Consolas:h10
-   set shell=powershell.exe
+    set gfn=Consolas:h10
+    set shell=powershell.exe
 else
-    set gfn=Monospace\ 10
+    set gfn=Envy\ Code\ R:h10
     set shell=/bin/bash
 endif
 
@@ -116,10 +123,7 @@ endif
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
-    colorscheme twilight
-else
-    colorscheme zellner
-    set background=dark
+    colorscheme jellybeans
 endif
 
 set encoding=utf8
@@ -129,7 +133,6 @@ catch
 endtry
 
 set ffs=unix,dos,mac "Default file types
-set list listchars=tab:\|-,trail:ˇ,extends:ť,precedes:Ť
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -155,8 +158,7 @@ endtry
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " display indentation guides
-set list listchars=tab:\|ˇ,trail:.,extends:ť,precedes:Ť,nbsp:×
-
+set list listchars=tab:��,trail:.
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -165,14 +167,15 @@ set smarttab
 set lbr
 set tw=500
 
-set ai             " Auto indent
-set si             " Smart indent
-set nowrap         " Wrap lines
+set ai     " Auto indent
+set si     " Smart indent
+set wrap   " Wrap lines
 
 
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
 " Use Ctrl+r to replace the selected text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "  In visual mode when you press * or # to search for the current selection
@@ -211,44 +214,17 @@ cno $h e ~/
 cno $j e ./
 cno $c e <C-\>eCurrentFileDir("e")<cr>
 
-" $q is super useful when browsing on the command line
-cno $q <C-\>eDeleteTillSlash()<cr>
-
 " map select all text to C-A
 noremap <C-A> ggVG
 
-" Useful on some European keyboards
-map ˝ $
-imap ˝ $
-vmap ˝ $
-cmap ˝ $
-
 func! Cwd()
     let cwd = getcwd()
-    return "e " . cwd 
-endfunc
-
-func! DeleteTillSlash()
-    let g:cmd = getcmdline()
-    if !win
-        let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*", "\\1", "")
-    else
-        let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\]\\).*", "\\1", "")
-    endif
-    if g:cmd == g:cmd_edited
-        if !win
-            let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*/", "\\1", "")
-        else
-            let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\\]\\).*\[\\\\\]", "\\1", "")
-        endif
-    endif   
-    return g:cmd_edited
+    return "e " . cwd
 endfunc
 
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
@@ -299,7 +275,7 @@ function! <SID>BufcloseCloseIt()
     endif
 endfunction
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
     set switchbuf=usetab
     set stal=2
@@ -331,12 +307,21 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket expanding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
-inoremap " ""<left>
-inoremap ' ''<left>
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
+" Map auto complete of (, ", ', [
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
+inoremap $t <><esc>i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -350,16 +335,6 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 
-"Delete trailing white space, useful for Python ;)
-func! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
-endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-
-set guitablabel=%t
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -368,6 +343,21 @@ map <leader>cc :botright cope<cr>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+"Shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 " => NERDTree plugin
@@ -387,14 +377,7 @@ let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
 
-autocmd BufRead,BufNew :call UMiniBufExplorer
-
 map <leader>u :TMiniBufExplorer<cr>
-
-""""""""""""""""""""""""""""""
-" => Yankring blugin
-""""""""""""""""""""""""""""""
-nnoremap <silent> <F11> :YRShow<CR>
 
 """"""""""""""""""""""""""""""
 " => MRU blugin
@@ -403,48 +386,30 @@ let MRU_Max_Entries = 400
 map <leader>r :MRU<CR>
 
 """"""""""""""""""""""""""""""
-" => Command-T
-""""""""""""""""""""""""""""""
-let g:CommandTMaxHeight = 15
-set wildignore+=*.o,*.obj,.git,*.pyc
-noremap <leader>j :CommandT<cr>
-noremap <leader>y :CommandTFlush<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Omni complete functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType sass set omnifunc=csscomplete#CompleteCSS
-autocmd FileType sss set omnifunc=csscomplete#CompleteCSS
+""""""""""""""""""""""""""""""
+au FileType css set omnifunc=csscomplete#CompleteCSS
+au FileType php set omnifunc=phpcomplete#CompletePHP
+" @TODO: Need to write a function for this
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 " => cTags plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 if win
     let Tlist_Ctags_Cmd='d:\Dropbox\apps\gVimPortable\ctags\ctags.exe'
 endif
 map <leader>t :TlistToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
+" => Languages
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-"Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
 
 """"""""""""""""""""""""""""""
-" => Php section
+" => PHP section
 """"""""""""""""""""""""""""""
-" PHP Autocomplete
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-set ofu=syntaxcomplete#Complete
-
+au FileType php inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+au FileType php nnoremap <C-P> :call PhpDocSingle()<CR>
+au FileType php vnoremap <C-P> :call PhpDocRange()<CR>
 
 """"""""""""""""""""""""""""""
 " => Python section
@@ -452,18 +417,17 @@ set ofu=syntaxcomplete#Complete
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
+au FileType python inoremap <buffer> $r return
+au FileType python inoremap <buffer> $i import
+au FileType python inoremap <buffer> $p print
+au FileType python inoremap <buffer> $f #--- PH ----------------------------------------------<esc>FP2xi
+au FileType python map <buffer> <leader>1 /class
+au FileType python map <buffer> <leader>2 /def
+au FileType python map <buffer> <leader>C ?class
+au FileType python map <buffer> <leader>D ?def
+
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
-
-au FileType python inoremap <buffer> $r return 
-au FileType python inoremap <buffer> $i import 
-au FileType python inoremap <buffer> $p print 
-au FileType python inoremap <buffer> $f #--- PH ----------------------------------------------<esc>FP2xi
-au FileType python map <buffer> <leader>1 /class 
-au FileType python map <buffer> <leader>2 /def 
-au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
-
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
@@ -477,10 +441,10 @@ au FileType javascript setl nocindent
 au FileType javascript imap <c-t> AJS.log();<esc>hi
 au FileType javascript imap <c-a> alert();<esc>hi
 
-au FileType javascript inoremap <buffer> $r return 
+au FileType javascript inoremap <buffer> $r return
 au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
 
-function! JavaScriptFold() 
+function! JavaScriptFold()
     setl foldmethod=syntax
     setl foldlevelstart=1
     syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
@@ -495,7 +459,12 @@ endfunction
 " => HTML section
 """"""""""""""""""""""""""""""
 if win
-    nmap <silent> <Leader>b :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %
+    nmap <silent> <Leader>b :!start C:\Users\Administrator\AppData\Local\Google\Chrome SxS\Application\chrome.exe %
 else
     nmap <silent> <Leader>b :!chromium-browser --user-data-dir=~/.chromium % &
 endif
+
+""""""""""""""""""""""""""""""
+" => CSS section
+""""""""""""""""""""""""""""""
+au BufRead,BufNewFile *.css set ft=css syntax=css3
