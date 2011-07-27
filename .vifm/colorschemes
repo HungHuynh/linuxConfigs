@@ -28,7 +28,7 @@
 # COLOR=Window_name=foreground_color_number=background_color_number
 
 COLORSCHEME=Default
-DIRECTORY=/home/jason
+DIRECTORY=/ntfs-data
 COLOR=MENU=7=-1
 COLOR=BORDER=-1=-1
 COLOR=WIN=white=-1

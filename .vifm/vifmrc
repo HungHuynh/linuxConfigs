@@ -44,7 +44,7 @@ HISTORY_LENGTH=15
 # To always save pane location on exit and start vifm in the
 # last visited directory set this to 1.
 
-SAVE_LOCATION=0
+SAVE_LOCATION=1
 
 # Follow links on l or Enter.
 
@@ -128,7 +128,9 @@ BOOKMARKS=z=/home/nxqd/.vifm=../
 # %d the current directory name.
 # %D the other window directory name.
 # %m run the command in a menu window
-
+COMMAND=zathura=zathura *.{pdf} &
+COMMAND=feh=feh *.{jpeg,jpg,png,tif,gif} &
+COMMAND=mplayer=mplayer *.{avi,mov,flv,mov,mp4,mpeg,mpg,ogg,ogv} &
 
 # The file type is for the default programs to be used with
 # a file extension.
@@ -138,7 +140,11 @@ BOOKMARKS=z=/home/nxqd/.vifm=../
 # The other programs for the file type can be accessed with the :file command
 # The command macros %f, %F, %d, %F may be used in the commands.
 # The %a macro is ignored.  To use a % you must put %%.
-
+FILETYPE=Images=jpg,jpeg,gif,tif,png,bmp==feh
+FILETYPE=Movies=flv,avi,mp4,mpeg,mpg,mov,ogg,ogv==mplayer
+FILETYPE=Web=html,htm,shtml==chromium-browser
+FILETYPE=PDF=pdf==zathura
+FILEYPE=Text=txt==vim
 
 # For automated FUSE mounts, you must register an extension with FILETYPE=..
 # in one of following formats:
