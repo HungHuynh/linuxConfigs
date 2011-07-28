@@ -209,6 +209,13 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Resize windows
+if bufwinnr(1)
+    map + <C-W>+
+    map - <C-W>-
+endif
+
 " Smart mappings on the command line
 cno $h e ~/
 cno $j e ./
