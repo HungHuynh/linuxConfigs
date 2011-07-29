@@ -261,6 +261,8 @@ map <left> :bp<cr>
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
 
+" Map to quit VIM
+map <leader>q :q<cr>
 
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
@@ -396,8 +398,6 @@ map <leader>r :MRU<CR>
 " => Omni complete functions
 """"""""""""""""""""""""""""""
 au FileType css set omnifunc=csscomplete#CompleteCSS
-au FileType php set omnifunc=phpcomplete#CompletePHP
-" @TODO: Need to write a function for this
 
 """"""""""""""""""""""""""""""
 " => cTags plugins
@@ -414,9 +414,9 @@ map <leader>t :TlistToggle<cr>
 """"""""""""""""""""""""""""""
 " => PHP section
 """"""""""""""""""""""""""""""
-au FileType php inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-au FileType php nnoremap <C-P> :call PhpDocSingle()<CR>
-au FileType php vnoremap <C-P> :call PhpDocRange()<CR>
+" au FileType php inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+" au FileType php nnoremap <C-P> :call PhpDocSingle()<CR>
+" au FileType php vnoremap <C-P> :call PhpDocRange()<CR>
 
 """"""""""""""""""""""""""""""
 " => Python section
@@ -474,4 +474,3 @@ endif
 """"""""""""""""""""""""""""""
 " => CSS section
 """"""""""""""""""""""""""""""
-au BufRead,BufNewFile *.css set ft=css syntax=css3

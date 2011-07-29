@@ -38,7 +38,7 @@ URxvt.boldFont:xft:monaco:bold:size=8
 !URxvt.boldFont: -*-terminus-medium-r-*-*-16*-*-*-*-*
 
 ! -- Colours -- !
-#include "/home/nxqd/.colours/dark"
+#include "/home/nxqd/.colours/colorful"
 !#include "/home/nxqd/.colours/low"
 !#include "/home/nxqd/.colours/old"
 !#include "/home/nxqd/.colours/soft"
