@@ -12,7 +12,7 @@ urxvtd -q -f -o &
 #wallpaper random
 while true
 do
-    feh --bg-scale "$(find /ntfs-data/Dropbox/Photos/wide -type f | shuf -n1)"
+    feh --bg-scale "$(find /ntfs-data/Dropbox/photo/wide -type f | shuf -n1)"
     sleep 15m
 done &
 
@@ -49,9 +49,9 @@ mem(){
 
 # CPU line courtesy Procyon: https://bbs.archlinux.org/viewtopic.php?pid=661592
 cpu(){
-    cpu="$(eval $(awk '/^cpu /{print "previdle=" $5 "; prevtotal=" $2+$3+$4+$5 }' /proc/stat); sleep 0.4; 
-    eval $(awk '/^cpu /{print "idle=" $5 "; total=" $2+$3+$4+$5 }' /proc/stat); 
-    intervaltotal=$((total-${prevtotal:-0})); 
+    cpu="$(eval $(awk '/^cpu /{print "previdle=" $5 "; prevtotal=" $2+$3+$4+$5 }' /proc/stat); sleep 0.4;
+    eval $(awk '/^cpu /{print "idle=" $5 "; total=" $2+$3+$4+$5 }' /proc/stat);
+    intervaltotal=$((total-${prevtotal:-0}));
     echo "$((100*( (intervaltotal) - ($idle-${previdle:-0}) ) / (intervaltotal) ))")"
     echo -e "\x05$cpu%\x01"
 }
