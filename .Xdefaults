@@ -27,13 +27,16 @@ URxvt*tintColor: #080808
 URxvt*shading: 0
 
 ! -- Fonts -- !
+!URxvt.font:xft:Droid Sans Mono Slashed:medium:size=8.6
+!URxvt.boldFont:xft:Droid Sans Mono Slashed:bold:size=8.6
 URxvt.font:xft:monaco:medium:size=8
 URxvt.boldFont:xft:monaco:bold:size=8
-!URxvt.font:xft:envy code r:medium:size=10
-!URxvt.boldFont:xft:envy code r:medium:size=10
+
+!URxvt.font:xft:envy code r:medium:size=9
+!URxvt.boldFont:xft:envy code r:medium:size=9
 !URxvt.font:xft:inconsolata:bold:pixelsize=12
-!URxvt.font:     -*-dina-medium-r-*-*-*-80-*-*-*-*-*-*
-!URxvt.boldFont: -*-dina-medium-r-*-*-*-80-*-*-*-*-*-*
+!URxvt.font:     -*-dina-medium-r-normal-*-*-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-dina-medium-r-normal-*-*-*-*-*-*-*-*-*
 !URxvt.font:     -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 !URxvt.boldFont: -*-terminus-medium-r-*-*-16*-*-*-*-*
 

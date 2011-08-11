@@ -7,7 +7,6 @@ find \.config
 open_with o
 find roo
 find .confi
-open_with 
 rename Big Bang - Tell Me Goodbye - HD 1080p.avi.001
 shell 
 shell -p cat Big\ Bang\ -\ Tell\ Me\ Goodbye\ -\ HD\ 1080p.avi.001 Big\ Bang\ -\ Tell\ Me\ Goodbye\ -\ HD\ 1080p.avi.002 > %s 
@@ -28,4 +27,7 @@ delete seriously? y
 shell mv doc.~1~ doc
 delete 
 cd --
+open_with 
+open_with vim
+wqa
 
