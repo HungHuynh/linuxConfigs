@@ -59,6 +59,7 @@ alias asynonym="sdcv -u Moby\ Thesaurus\ II"
 alias apc="python2 ~/.scripts/ideone.py"
 alias scim='scim -f x11 -c simple -d'
 alias vifm='vifm .'
+alias tmux='tmux attach'
 
 #Editor
 alias v='vim'

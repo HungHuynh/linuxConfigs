@@ -13,7 +13,7 @@ urxvtd -q -f -o &
 while true
 do
     feh --bg-scale "$(find /ntfs-data/Dropbox/photo/wide -type f | shuf -n1)"
-    sleep 15m
+    sleep 10m
 done &
 
 #font

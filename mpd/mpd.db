@@ -21,7 +21,7 @@ tag: MUSICBRAINZ_ALBUMARTISTID
 tag: MUSICBRAINZ_TRACKID
 info_end
 directory: en
-mtime: 1309188499
+mtime: 1312779524
 begin: en
 song_begin: 50 Cent - In Da Club.mp3
 Time: 194
@@ -101,6 +101,10 @@ Time: 180
 Artist: David Cook
 Title: The Last Goodbye
 mtime: 1307781106
+song_end
+song_begin: Deep Side - Booty Music.mp3
+Time: 183
+mtime: 1311173819
 song_end
 song_begin: Diddy-Dirty Money - I'm coming home.mp3
 Time: 240
@@ -560,12 +564,33 @@ Title: Come Back To Me
 Album: mp3.zing.vn
 mtime: 1308314248
 song_end
+song_begin: Count On Me - Lee Ki Chan ft. G.NA.mp3
+Time: 197
+Artist: Lee Ki Chan,G.NA
+Title: Count On Me
+Album: mp3.zing.vn
+mtime: 1312375975
+song_end
+song_begin: David Archuleta - Touch My Hand.mp3
+Time: 261
+Artist: David Archuleta
+Title: Touch My Hand
+Album: mp3.zing.vn
+mtime: 1311150873
+song_end
 song_begin: David Cook - The Time Of My Life.mp3
 Time: 216
 Artist: David Cook
 Title: The Time Of My Life
 Album: mp3.zing.vn
 mtime: 1308313846
+song_end
+song_begin: Eric Saade - Hearts In The Air.mp3
+Time: 240
+Artist: Eric Saade
+Title: Hearts In The Air
+Album: mp3.zing.vn
+mtime: 1312162341
 song_end
 song_begin: Fall Out Boy - This Ain't A Scene, It's An Arms Race.mp3
 Time: 213
@@ -615,6 +640,20 @@ Artist: Katharine McPhee
 Title: Over It
 Album: mp3.zing.vn
 mtime: 1305680840
+song_end
+song_begin: Rolling In The Deep - Adele.mp3
+Time: 229
+Artist: Adele
+Title: Rolling In The Deep
+Album: mp3.zing.vn
+mtime: 1312630415
+song_end
+song_begin: Shayne Ward - Until You.mp3
+Time: 248
+Artist: Shayne Ward
+Title: Until You
+Album: mp3.zing.vn
+mtime: 1310369534
 song_end
 song_begin: Utada Hikaru - First Love.mp3
 Time: 255
@@ -678,7 +717,7 @@ mtime: 1307097808
 song_end
 end: epic
 directory: kor
-mtime: 1308863280
+mtime: 1312253281
 begin: kor
 song_begin: - Like Being Crazy.mp3
 Time: 171
@@ -705,7 +744,7 @@ Title: , St(u\)
 Album: 2nd Live Concert : Rock Prince
 Track: 14
 Date: 2009
-Genre:  |\ (Ballad)
+Genre: |\ (Ballad)
 mtime: 1307838174
 song_end
 song_begin: Spontania feat. JUJU.mp3
@@ -746,6 +785,20 @@ Track: 1412
 Date: 2011
 Genre: Nhac Han Quoc
 mtime: 1307189687
+song_end
+song_begin: 2NE1 - Hate You.mp3
+Time: 211
+Artist: 2NE1
+Title: Hate You
+Album: mp3.zing.vn
+mtime: 1312047152
+song_end
+song_begin: 2PM - Hands Up.mp3
+Time: 199
+Artist: 2PM
+Title: Hands Up
+Album: mp3.zing.vn
+mtime: 1310369495
 song_end
 song_begin: Dreaming - Kim Soo Hyun.mp3
 Time: 222
@@ -791,7 +844,7 @@ mtime: 1307799188
 song_end
 end: kor
 directory: vi
-mtime: 1309543788
+mtime: 1312433422
 begin: vi
 song_begin: Ung Dai Ve ft. Lil_ Knight - Anh Nho Em Nhieu.mp3
 Time: 283
@@ -812,6 +865,14 @@ Album: NhacCuaTui.Com
 Track: 1412
 Genre: Nhac Tre
 mtime: 1308778326
+song_end
+song_begin: Yanbi - Sad Autumn.mp3
+Time: 196
+Artist: © Duy me0
+AlbumArtist: Yanbi
+Title: Sad Autumn (Thu Buon)
+Album: Rap.VN
+mtime: 1310369461
 song_end
 song_begin:  Lil Shady ft. Shiver - Luc Yeu (Remix).mp3
 Time: 270
@@ -855,6 +916,13 @@ Title: Chi Anh Hieu Em
 Album: mp3.zing.vn
 mtime: 1309534761
 song_end
+song_begin: Khoi My - Khoc dem.mp3
+Time: 216
+Artist: Khoi My
+Title: Khoc Dem
+Album: mp3.zing.vn
+mtime: 1310431711
+song_end
 song_begin: Khoi My - La Con Gai That Tuyet.mp3
 Time: 218
 Artist: Khoi My
@@ -868,6 +936,13 @@ Artist: Khong Tu Quynh
 Title: Voi Vang
 Album: mp3.zing.vn
 mtime: 1308829939
+song_end
+song_begin: Lau Roi - Khoi My.mp3
+Time: 274
+Artist: Khoi My
+Title: Lau Roi
+Album: mp3.zing.vn
+mtime: 1312394447
 song_end
 song_begin: Le Hieu - Chuyen Nhu The Day.mp3
 Time: 284
@@ -910,6 +985,13 @@ Artist: Minh Hang,Tim ((Cat Vu))
 Title: Canh Dong Tuyet
 Album: mp3.zing.vn
 mtime: 1308828305
+song_end
+song_begin: My Tam - Nu Hon Bat Ngo.mp3
+Time: 209
+Artist: Má»¹ TÃ¢m
+Title: Ná»¥ HÃ´n Báº¥t Ngá»
+Album: mp3.zing.vn
+mtime: 1311215504
 song_end
 song_begin: Nam Cuong - Kho.mp3
 Time: 236
@@ -1001,6 +1083,13 @@ Artist: The Men
 Title: Mot Loi Hua
 Album: mp3.zing.vn
 mtime: 1308314863
+song_end
+song_begin: Thu Minh - Doi Tu.mp3
+Time: 207
+Artist: Thu Minh
+Title: Doi Tu
+Album: mp3.zing.vn
+mtime: 1311573994
 song_end
 song_begin: Tim - Canh Chim Hai Au.mp3
 Time: 271

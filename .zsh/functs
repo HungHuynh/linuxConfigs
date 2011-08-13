@@ -25,12 +25,10 @@
    fi
  }
 # Twitter
- twit () {
-    curl -u Nxqd3051990:reachyourgoal\&7\& -d status="$*" http://twitter.com/statuses/update.xml > /dev/null &2>1 ;
- }
+tweet () { curl -u nXqd -d status="$*" http://twitter.com/statuses/update.xml; }
 
 # Make dir and move into it
- mkcd () {
-    mkdir -p "$@" && cd "$_"; 
- }
+mkcd () {
+   mkdir -p "$@" && cd "$_";
+}
 

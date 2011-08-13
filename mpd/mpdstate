@@ -1,74 +1,51 @@
-sw_volume: 100
+sw_volume: 98
 audio_device_state:1:default detected output
-state: stop
-current: 48
+state: play
+current: 8
+time: 66
 random: 0
-repeat: 1
+repeat: 0
 single: 0
-consume: 1
+consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: nan
 playlist_begin
-0:en/Akeboshi - Wind.mp3
-1:en/A Little Too Not Over You - David Archuleta.mp3
-2:en/Ann Wilson - La La Love On My Mind.mp3
-3:en/Anya Marina - Whatever You Like (Single Version).mp3
-4:en/Aqua - Doctor Jone.mp3
-5:en/Brad Garrett, Jeffrey Tambor, Mandy Moore, Zachary Levi & The Thug Chorus - I've Got A Dream.mp3
-6:en/Britney Spears - Autumn Goodbye.mp3
-7:en/Bruno Mars - The Lazy Song.mp3
-8:en/Cher - Welcome To Burlesque.mp3
-9:en/Christina Aguilera - Show Me How You Burlesque.mp3
-10:en/Christina Aguilera - You Lost Me.mp3
-11:en/Come Back To Me - Utada Hikaru.mp3
-12:en/David Cook - The Last Goodbye.mp3
-13:en/David Cook - The Time Of My Life.mp3
-14:en/Diddy-Dirty Money - I'm coming home.mp3
-15:en/Eminem - Eminem Ft 50 Cent & Dr.Dre - Encore(one last time).mp3
-16:en/Engelbert Humperdinck - Quando Quando Quando.mp3
-17:en/Enrique Iglesias - Hero.mp3
-18:en/Fall Out Boy - I Don't Care.mp3
-19:en/Fall Out Boy - Thanks For The Memories.mp3
-20:en/Fall Out Boy - This Ain't A Scene, It's An Arms Race.mp3
-21:en/Fall Out Boy - Thnks Fr Th Mmrs.mp3
-22:en/Fall Out Boy,John Mayer - Beat It.mp3
-23:en/Fast Lane - Bad Meets Evil.mp3
-24:en/Guns N' Roses - Since I Don't Have You.mp3
-25:en/Guns N' Roses - Sweet Child O' Mine.mp3
-26:en/Helloween - If I Could Fly.mp3
-27:en/Its My Life - Bon Jovi.mp3
-28:en/J-Ivanovici - Danube Waves.mp3
-29:en/Jack Johnson - Good People.mp3
-30:en/Jadakiss_Jennifer Lopez_Styles P - Jenny from the Block.mp3
-31:en/Jennifer Lopez - Love Don't Cost A Thing.mp3
-32:en/Jennifer Lopez - No Me Ames.mp3
-33:en/Justin Timberlake - Girldfriend (Feat. Nelly).mp3
-34:en/Kaya Kaya - C'est si Bon.mp3
-35:en/Kaya Kaya - Je te Veux.mp3
-36:en/Kaya Kaya - La Vie en Rose.mp3
-37:en/Kenny Rogers - Lady.mp3
-38:en/Khac Viet- Nam Cuong - Kho.mp3
-39:en/Lenka - Heart Skips A Beat.mp3
-40:en/Mandy Moore - When Will My Life Begin_.mp3
-41:en/MAROON 5 - IF I NEVER SEE YOUR FACE AGAIN.mp3
-42:en/Maroon 5 - Misery.mp3
-43:en/Maroon 5 - Secret.mp3
-44:en/Maroon 5 - Wake Up Call.mp3
-45:en/Metallica - nothing else matters.mp3
-46:en/Metallica - One.mp3
-47:en/Michael Jackson - Billie Jean.mp3
-48:en/One Republic - Stop And Stare.mp3
-49:en/OneRepublic - Apologize.mp3
-50:en/Over It - Katharine McPhee.mp3
-51:en/P!NK - Raise Your Glass.mp3
-52:en/Red Hot Chili Peppers - Hey.mp3
-53:en/Santana - Science Fiction Double Feature.mp3
-54:en/Sara Bareilles - Love Song.mp3
-55:en/Sarah Connor - Just One Last Dance.mp3
-56:en/Scotty McCreery - I Love You This Big.mp3
-57:en/Seal Seal - Kiss From A Rose.mp3
-58:en/Sebastian - Kiss The Girl.mp3
-59:en/Taio Cruz - Dynamite.mp3
-60:en/The Black Eyed Peas - I Gotta Feeling.mp3
+0:vi/Yanbi - Sad Autumn.mp3
+1:vi/ Lil Shady ft. Shiver - Luc Yeu (Remix).mp3
+2:vi/Bang Cuong ft. Khanh Phuong - Ton Tho Mot Tinh Yeu.mp3
+3:vi/Bong Hong Thuy Tinh - Buc Tuong.mp3
+4:vi/Cao Thai Son - Yeu Thuong Quay Ve.mp3
+5:vi/Dem Cho Vo - Le Hieu.mp3
+6:vi/Khac Viet - Chi Anh Hieu Em.mp3
+7:vi/Khac Viet- Nam Cuong - Kho.mp3
+8:vi/Khoi My - Khoc dem.mp3
+9:vi/Khoi My - La Con Gai That Tuyet.mp3
+10:vi/Khong Tu Quynh - Voi Vang.mp3
+11:vi/Lau Roi - Khoi My.mp3
+12:vi/Le Hieu - Chuyen Nhu The Day.mp3
+13:vi/Le Hieu - Con Duong Mau Xanh.mp3
+14:vi/Le Hieu - Ngay Mai Em Di.mp3
+15:vi/Lenka - Heart Skips A Beat.mp3
+16:vi/Luu Huong Giang - Tam Biet.mp3
+17:vi/Minh Hang ft. Tim - Canh Dong Tuyet.mp3
+18:vi/My Tam - Nu Hon Bat Ngo.mp3
+19:vi/Nam Cuong - Kho.mp3
+20:vi/Nam Cuong ft. Khac Viet - Suy Nghi Trong Anh.mp3
+21:vi/Ngay Hom Qua - Buc Tuong.mp3
+22:vi/Ngo Kien Huy - Can Mot Nguoi Hieu.mp3
+23:vi/Ngo Kien Huy - Chuc Em Ngu Ngon.mp3
+24:vi/Nguyen Van Chung - Bai Hat Cua Mua.mp3
+25:vi/Nguyen Vu - Tu Khi Em Den.mp3
+26:vi/Noo Phuoc Thinh - Chi La Giac Mo.mp3
+27:vi/Noo Phuoc Thinh ft. Ho Ngoc Ha - Noi Nho Day Voi.mp3
+28:vi/Phuong Anh - Chi Mot Minh Anh.mp3
+29:vi/Rock Xuyen Man Dem - Buc Tuong.mp3
+30:vi/The Men - Em Luon O Trong Tam Tri Anh.mp3
+31:vi/The Men - Mot Loi Hua.mp3
+32:vi/Thu Minh - Doi Tu.mp3
+33:vi/Tim - Canh Chim Hai Au.mp3
+34:vi/Ung Dai Ve ft. Lil_ Knight - Anh Nho Em Nhieu.mp3
+35:vi/V.Music - Que Huong Toi.mp3
+36:vi/Va Toi Cung Yeu Em - Le Hieu.mp3
 playlist_end

@@ -82,7 +82,7 @@ set wildmenu                   " Turn on WiLd menu
 set ruler                      " Always show current position
 set cmdheight=1                " The commandbar height
 set hid                        " Change buffer - without saving
-set nonu                       " No line number
+set nu                       " No line number
 
 " Set backspace config
 set backspace=eol,start,indent
@@ -398,6 +398,7 @@ map <leader>r :MRU<CR>
 " => Omni complete functions
 """"""""""""""""""""""""""""""
 au FileType css set omnifunc=csscomplete#CompleteCSS
+au FileType php set omnifunc=phpcomplete#CompletePHP
 
 """"""""""""""""""""""""""""""
 " => cTags plugins
