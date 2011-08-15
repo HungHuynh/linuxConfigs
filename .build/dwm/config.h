@@ -76,7 +76,7 @@ static Key keys[] = {
     { Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
     { Mod4Mask,                     XK_p,      spawn,          {.v = padcmd } },
     /* my own binding start */
-    { Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser --user-data-dir=.chromium;") },
+    { Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser") },
     {      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 -t 25 '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f $m /ntfs-data/inbox/tmp/screenshots'") },
     {      0,                       0x1008ff12,spawn,          {.v = soundMute } },
     {      0,                       0x1008ff11,spawn,          {.v = soundDown } },

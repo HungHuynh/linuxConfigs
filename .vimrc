@@ -39,6 +39,9 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Leave the old way behind
+set nocompatible
+
 " Check if which os gvim runs
 let win = 0
 if has("win32")
@@ -74,6 +77,8 @@ endif
 " Auto remove trailing spaces
 au BufWritePre * :%s/\s\+$//e
 
+set clipboard+=unnamed  " yank and copy to X clipboard
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,7 +87,7 @@ set wildmenu                   " Turn on WiLd menu
 set ruler                      " Always show current position
 set cmdheight=1                " The commandbar height
 set hid                        " Change buffer - without saving
-set nu                       " No line number
+set nu                         " No line number
 
 " Set backspace config
 set backspace=eol,start,indent
@@ -126,12 +131,7 @@ if has("gui_running")
     colorscheme jellybeans
 endif
 
-set encoding=utf8
-try
-    lang en_US
-catch
-endtry
-
+set encoding=utf-8
 set ffs=unix,dos,mac "Default file types
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,7 +159,7 @@ endtry
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " display indentation guides
 set list listchars=tab:»·,trail:.
-set expandtab
+set noexpandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab

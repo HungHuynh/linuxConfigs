@@ -1,4 +1,4 @@
-music_directory       "/ntfs-data/Dropbox/music"         # Your music dir.
+music_directory       "/mnt/ntfs-inbox/Dropbox/music"         # Your music dir.
 playlist_directory    "~/mpd/playlists"
 db_file               "~/mpd/mpd.db"
 log_file              "~/mpd/mpd.log"
