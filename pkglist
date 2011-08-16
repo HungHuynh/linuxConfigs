@@ -1,22 +1,58 @@
-coffee-script 1.1.1-1
-dropbox-experimental 1.2.13-1
-mplayer 33805-2
-ncmpcpp 0.5.7-1
-ntfs-3g 2011.4.12-1
-opencore-amr 0.1.2-1
-rtorrent-color 0.8.9-1
-rxvt-unicode 9.12-1
-vim-align 35.41-6
-vim-gist 4.9-2
-vim-html5-git 20110729-1
-vim-jquery 0.4-2
-vim-markdown 9-2
-vim-minibufexpl 6.4.2-1
-vim-nerdcommenter 2.3.0-1
-vim-nerdtree 4.1.0-5
-vim-php-doc 1.0-1
-vim-runtime 7.3.266-1
-vim-snipmate 0.83-7
-vim-surround 1.90-1
-zathura-git 20110703-1
-zsh-lovers 0.8.3-1
+alsa-utils
+attr
+cairo-ubuntu
+chromium-codecs-ffmpeg-nonfree-bin
+dcron
+dina-font
+dmenu
+dropbox-experimental
+dwm
+feh
+flashplugin-prerelease
+freetype2-ubuntu
+git
+htop
+ibus-unikey
+libusb
+libxft-ubuntu
+libxv
+linux-firmware
+lzo2
+module-init-tools
+monaco-linux-font
+mpd
+mplayer-svn
+mysql
+ncmpcpp-git
+net-tools
+nginx
+ntfs-3g
+openssh
+pacman-mirrorlist
+pam
+php
+php-curl
+php-fpm
+php-mcrypt
+phpmyadmin
+php-xcache
+rp-pppoe
+rxvt-unicode
+scrot
+sudo
+tmux-git
+ttf-ms-fonts
+unzip
+vifm-git
+vim
+xclip
+xf86-video-ati
+xorg-server
+xorg-xfontsel
+xorg-xinit
+xorg-xsetroot
+xterm
+yaourt
+zathura-git
+zsh
+zsh-lovers

@@ -12,7 +12,7 @@ urxvtd -q -f -o &
 #wallpaper random
 while true
 do
-    feh --bg-scale "$(find /ntfs-data/Dropbox/photo/wide -type f | shuf -n1)"
+    feh --bg-scale "$(find /mnt/ntfs-inbox/Dropbox/photo/square -type f | shuf -n1)"
     sleep 10m
 done &
 

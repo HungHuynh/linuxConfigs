@@ -41,7 +41,7 @@ alias work='cd /ntfs-data/work/'
 alias vid='cd /ntfs-data/vids'
 alias lang='cd /ntfs-data/docs/lang'
 alias build='~/.build/'
-alias dev='cd /ntfs-data/Dropbox/dev/'
+alias dev='cd /mnt/ntfs-inbox/Dropbox/dev/'
 alias dotfiles='cd /ntfs-data/.dotFiles/'
 
 #Tweak application default running mode

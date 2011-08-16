@@ -222,7 +222,7 @@ cno $j e ./
 cno $c e <C-\>eCurrentFileDir("e")<cr>
 
 " map select all text to C-A
-noremap <C-A> ggVG
+noremap <C-a> ggVG
 
 func! Cwd()
     let cwd = getcwd()

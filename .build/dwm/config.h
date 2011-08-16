@@ -22,7 +22,7 @@ static const char colors[NUMCOLORS][ColLast][8] = {
 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const Bool showbar           = True;     /* False means no bar */
+static const Bool showbar           = False;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
@@ -72,15 +72,19 @@ static const char *soundPrev[]      = { "ncmpcpp", "next", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ 0,                     		Mod4Mask,         spawn,          {.v = dmenucmd } },
     { Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
     { Mod4Mask,                     XK_p,      spawn,          {.v = padcmd } },
     /* my own binding start */
     { Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser") },
-    {      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 -t 25 '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f $m /ntfs-data/inbox/tmp/screenshots'") },
+    {      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 -t 25 '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f $m /mnt/ntfs-tmp/tmp/screenshots'") },
     {      0,                       0x1008ff12,spawn,          {.v = soundMute } },
+    { MODKEY,                       XK_Left	  ,spawn,          {.v = soundMute } },
     {      0,                       0x1008ff11,spawn,          {.v = soundDown } },
+    { MODKEY,                       XK_Down	  ,spawn,          {.v = soundDown } },
     {      0,                       0x1008ff13,spawn,          {.v = soundUp } },
+    { MODKEY,                       XK_Up	  ,spawn,          {.v = soundUp } },
     {      0,                       0x1008ff16,spawn,          {.v = soundPrev } },
     {      0,                       0x1008ff17,spawn,          {.v = soundNext } },
     /* my own binding end   */

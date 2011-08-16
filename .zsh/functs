@@ -32,3 +32,10 @@ mkcd () {
    mkdir -p "$@" && cd "$_";
 }
 
+# start nginx
+start-nginx() {
+	sudo rc.d start nginx && sudo rc.d start php-fpm;
+}
+reload-nginx() {
+	sudo rc.d restart nginx && sudo rc.d restart php-fpm;
+}
