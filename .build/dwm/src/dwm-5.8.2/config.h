@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
+
 /* Include */
 // #include "X11/F86kysym.h"
 
@@ -62,6 +63,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[]      = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
 static const char *termcmd[]        = { "urxvtc", NULL };
+static const char *browsercmd[]        = { "urxvtc", NULL };
 static const char *padcmd[]         = { "urxvtc", "-title", "scratchpad", "-geometry", "54x10+504+12", NULL };
 static const char *soundMute[]      = { "amixer", "set", "Master", "toggle", NULL };
 static const char *soundUp[]        = { "amixer", "set", "Master", "2+", NULL };
@@ -73,11 +75,11 @@ static const char *soundPrev[]      = { "ncmpcpp", "next", NULL };
 static Key keys[] = {
     /* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ 0,                     		Mod4Mask,         spawn,          {.v = dmenucmd } },
+	{ Mod4Mask,                     NULL,      spawn,          {.v = dmenucmd } },
     { Mod4Mask,                     XK_Return, spawn,          {.v = termcmd } },
     { Mod4Mask,                     XK_p,      spawn,          {.v = padcmd } },
     /* my own binding start */
-    { Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser") },
+    { Mod4Mask,                     XK_b,      spawn,          SHCMD("exec chromium-browser --proxy-server=\"localhost:8118\"") },
     {      0,                       XK_Print,  spawn,          SHCMD("exec scrot -q 100 -t 25 '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f $m /mnt/ntfs-tmp/tmp/screenshots'") },
     {      0,                       0x1008ff12,spawn,          {.v = soundMute } },
     { MODKEY,                       XK_Left	  ,spawn,          {.v = soundMute } },
