@@ -14,18 +14,18 @@ download_rate = 200
 upload_rate = 28
 
 # Default directory to save the downloaded torrents.
-directory = /home/[user]/torrents/
+directory = /mnt/ntfs-tmp/tor/
 
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
 # relative path?
-session = /home/[user]/.session/
+session = /home/nxqd/.session/
 
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
 #schedule = watch_directory,5,5,load_start=./watch/*.torrent
 #schedule = untied_directory,5,5,stop_untied=
-schedule = watch_directory,5,5,load_start=/home/[user]/watch/*.torrent
+schedule = watch_directory,5,5,load_start=/mnt/ntfs-tmp/tor/*.torrent
 schedule = untied_directory,5,5,stop_untied=
 schedule = tied_directory,5,5,start_tied=
 

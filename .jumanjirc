@@ -15,6 +15,7 @@ script ~/.config/jumanji/scripts/hints.js
 #set stylesheet ~/.config/jumanji/style.css
 
 # proxy
+set proxy 127.0.0.1:8118
 
 # Search engines
 searchengine g http://www.google.com/search?q=%s
