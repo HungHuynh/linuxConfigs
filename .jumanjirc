@@ -3,7 +3,7 @@ set homepage http://calendar.google.com
 set auto_save 60
 
 # look
-set font droid sans medium 9
+set font monaco medium 9
 
 # key bindings
 map <C-q> quit
