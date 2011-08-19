@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+# Clipboard sync
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
+
 #turn off beep sound
 xset -b
 
@@ -12,7 +16,7 @@ urxvtd -q -f -o &
 #wallpaper random
 while true
 do
-    feh --bg-scale "$(find /mnt/ntfs-inbox/Dropbox/photo/square -type f | shuf -n1)"
+    imlibsetroot "$(find /mnt/ntfs-inbox/Dropbox/photo/square -type f | shuf -n1)"
     sleep 10m
 done &
 
