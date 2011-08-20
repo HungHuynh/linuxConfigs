@@ -1,7 +1,5 @@
 ! Urxvt
 URxvt.buffered: true
-URxvt.background: #121212
-URxvt.foreground: #999999
 URxvt.cursorColor: #5E468C
 URxvt.cursorBlink: true
 URxvt.geometry: 80x22
@@ -22,8 +20,8 @@ URxvt*scrollBar: false
 URxvt*borderLess: false
 
 ! teh transparency stuff
-URxvt*inheritPixmap: false
-URxvt*tintColor: #080808
+URxvt*inheritPixmap: true
+URxvt*tintColor: white
 URxvt*shading: 0
 
 ! -- Fonts -- !

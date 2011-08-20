@@ -1,8 +1,11 @@
 !!jwr dark
+*background: #121212
+*foreground: #999999
 !black
 *color0: #333333
 *color8: #3D3D3D
 !red
+ded
 *color1: #8C4665
 *color9: #BF4D80
 !green
