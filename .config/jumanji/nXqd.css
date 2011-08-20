@@ -5,15 +5,15 @@ body {
     font-family:"DejaVu Sans", monospace !important ;
     font-size:12px;
 }
- 
+
 pre {
     font-size:12px;
 }
- 
+
 p {
     font-size:12px;
 }
- 
+
 input {
     font-size:12px;
     background-color: #ebf1f5 !important;
@@ -21,7 +21,7 @@ input {
     outline: none !important;
     color: #343434 !important;
 }
- 
+
 input:hover {
     font-size:12px;
     background-color: #dedcdf !important;
@@ -29,11 +29,11 @@ input:hover {
     outline: none;
     color: #343434;
 }
- 
+
 img {
     font-size:12px;
 }
- 
+
 textarea {
     font-size:12px;
     background-color: #ebf1f5;
@@ -41,7 +41,7 @@ textarea {
     outline: none;
     color: #343434;
 }
- 
+
 .box {
     font-size:12px;
 }
@@ -49,39 +49,39 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
     font-size:12px;
 }
- 
+
 a:link {
     font-size:12px;
     text-decoration: none !important;
     outline: none;
 }
- 
+
 a:active {
     font-size:12px;
     text-decoration: none !important;
     outline: none;
 }
- 
+
 a:hover {
     font-size:12px;
     text-decoration: none !important;
     outline: none;
 }
- 
+
 a:visited {
     font-size:12px;
     text-decoration: none !important;
     outline: none;
 }
- 
+
 td {
     font-size:12px;
 }
- 
+
 tr {
     font-size:12px;
 }
- 
+
 dl {
     font-size:12px;
 }
@@ -89,35 +89,34 @@ dl {
 dd {
     font-size:12px;
 }
- 
+
 th {
     font-size:12px;
 }
- 
+
 li {
     font-size:12px;
 }
- 
+
 ul {
     font-size:12px;
 }
- 
+
 ol {
     font-size:12px;
 }
- 
+
 blockquote {
     font-size:12px;
 }
- 
+
 div.postright, div.postfootright, div.box {
     font-size:12px;
 }
- 
+
 div {
     font-size:12px;
 }
- 
+
 div.incqbox, div.codebox,div.scrollbox {
     font-size:12px;
-}

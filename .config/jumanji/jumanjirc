@@ -1,6 +1,8 @@
 
 # browser settings
 set homepage http://calendar.google.com
+
+# auto save session / bookmarks
 set auto_save 60
 
 # look
@@ -9,11 +11,15 @@ set font droid sans mono medium 8
 # key bindings
 map <C-q> quit
 
+# session
+set default_session_name start
+set session_restored true
+
 # follow hint
 script ~/.config/jumanji/scripts/hints.js
 
 # custom css
-# set stylesheet file:///root/.config/jumanji/nXqd.css
+set stylesheet ~/.config/jumanji/nXqd.css
 
 
 # Enable plugins

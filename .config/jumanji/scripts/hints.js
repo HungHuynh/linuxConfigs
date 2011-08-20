@@ -149,7 +149,7 @@ function dwb_create_stylesheet() {
   var styles = document.createElement("style");
   styles.type = "text/css";
   document.getElementsByTagName('head')[0].appendChild(styles);
-  
+
   var style = document.styleSheets[document.styleSheets.length - 1];
   style.insertRule('a[dwb_highlight=hint_normal] { background: ' + normal_color + ' } ', 0);
   style.insertRule('a[dwb_highlight=hint_normal] { outline: 1px solid ' + normal_color + ' } ', 0);
@@ -203,7 +203,7 @@ function show_hints() {
   }
   active_arr = elements;
   set_active(active_arr[0]);
-  
+
   document.getElementsByTagName("body")[0].appendChild(hints);
 }
 function update_hints(input) {
