@@ -210,6 +210,11 @@ endfunction
 " => Command mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Control C, V to coy and paste
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+
+
 " Resize windows
 if bufwinnr(1)
     map + <C-W>+
