@@ -159,9 +159,9 @@ endtry
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " display indentation guides
 set list listchars=tab:»·,trail:.
-set noexpandtab
-set shiftwidth=4
-set tabstop=4
+set expandtab
+set shiftwidth=2
+set tabstop=2
 set smarttab
 
 set lbr
@@ -214,13 +214,6 @@ endfunction
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 
-
-" Resize windows
-if bufwinnr(1)
-    map + <C-W>+
-    map - <C-W>-
-endif
-
 " Smart mappings on the command line
 cno $h e ~/
 cno $j e ./
@@ -239,11 +232,14 @@ func! CurrentFileDir(cmd)
 endfunc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs and buffers
+" => Moving around tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Map space to / (search) and c-space to ? (backgwards search)
 map <space> /
 map <c-space> ?
+
+" no Highlight mapping to <leader>
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move btw. windows
@@ -252,11 +248,9 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-
+" Buffers mapping
 map <leader>bd :bdelete<cr>
 map <leader>bc :Bclose<cr>
-
-" Close all the buffers
 map <leader>ba :1,300 bd!<cr>
 
 " Use the arrows to something usefull
