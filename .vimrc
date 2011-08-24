@@ -62,7 +62,7 @@ let g:mapleader = ","
 if win
     map <leader>e :e! D:\Dropbox\apps\gVimPortable\Data\settings\_vimrc
 else
-    map <leader>e :e! ~/.vimrc<cr>
+    map <leader>e :e! ~/.gvimrc<cr>
 endif
 
 nmap <leader>w : w!<cr>
@@ -117,18 +117,21 @@ syntax enable
 
 " Set font according to system
 if win
-    set gfn=Consolas:h10
     set shell=powershell.exe
 else
     set gfn=Envy\ Code\ R:h10
     set shell=/bin/bash
 endif
 
+set t_Co=256
+set guioptions+=LlRrbmT
+set guioptions-=LlRrbmT
+set gfn=Monaco\ 8
 
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=m
-    colorscheme jellybeans
+if has('gui_running')
+  colorscheme jellybeans
+else
+  colorscheme xoria256
 endif
 
 set encoding=utf-8
@@ -368,6 +371,14 @@ map <leader>s? z=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" => php-docs
+""""""""""""""""""""""""""""""
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR>
+
+
+""""""""""""""""""""""""""""""
 " => NERDTree plugin
 """"""""""""""""""""""""""""""
 map <leader>o :NERDTreeToggle<cr>
@@ -396,7 +407,7 @@ map <leader>r :MRU<CR>
 """"""""""""""""""""""""""""""
 " => Omni complete functions
 """"""""""""""""""""""""""""""
-au FileType css set omnifunc=csscomplete#CompleteCSS
+set ofu=syntaxcomplete#Complete
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
 """"""""""""""""""""""""""""""
@@ -411,12 +422,6 @@ map <leader>t :TlistToggle<cr>
 " => Languages
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""
-" => PHP section
-""""""""""""""""""""""""""""""
-" au FileType php inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-" au FileType php nnoremap <C-P> :call PhpDocSingle()<CR>
-" au FileType php vnoremap <C-P> :call PhpDocRange()<CR>
 
 """"""""""""""""""""""""""""""
 " => Python section
