@@ -33,4 +33,4 @@ searchengine timer http://e.ggtimer.com/%s
 
 # Downloads
 set download_dir /ntfs-data/inbox/
-set download_command urxvt -e sh -c "wget --load-cookies ~/.config/jumanji/cookies '%s' -O %s";
+set download_command urxvt -e wget --load-cookies ~/.config/jumanji/cookies '%s' -O '%s';
