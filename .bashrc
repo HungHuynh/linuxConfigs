@@ -1,37 +1,27 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+
 #-------------------------------------------------
-# file:     ~/.bashrc                           
-# author:   jason ryan - http://jasonwryan.com/    
+# file:     ~/.bashrc
+# author:   jason ryan - http://jasonwryan.com/
 # vim:nu:ai:si:et:ts=4:sw=4:ft=sh:
-# -------------------------------------------------
-
-# GPG Key
-export GPGKEY=B1BD4E40
-
-# bash options ------------------------------------
-shopt -s autocd             # change to named directory
-shopt -s cdable_vars        # if cd arg is not valid, assumes its a var defining a dir
-shopt -s cdspell            # autocorrects cd misspellings
-shopt -s checkwinsize       # update the value of LINES and COLUMNS after each command if altered
-shopt -s cmdhist            # save multi-line commands in history as single line
-shopt -s dotglob            # include dotfiles in pathname expansion
-shopt -s expand_aliases     # expand aliases
-shopt -s extglob            # enable extended pattern-matching features
-shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
-shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
+# ------------------------------------------------
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 
 set_prompt_style () {
-
-  PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
+  #1;38;5;55m
+  PS1="┌─[\[\e[1;30m\]\h\[\e[0m\]][\[\e[1;32m\]\w\[\e[0m\]]\n└─╼ "
 }
 set_prompt_style
 
-alias ls='ls --color=auto'
-
-eval `dircolors -b ~/.dir_colors`
+#eval `dircolors -b ~/.dir_colors`
 
 # set 256 colours in tmux
 [ -n "$TMUX" ] && export TERM=screen-256color
@@ -48,9 +38,9 @@ PATH=$PATH:/usr/lib/surfraw
 PATH=/usr/share/perl5/vendor_perl/auto/share/dist/Cope:$PATH
 
 # set default browser
-BROWSER=/usr/bin/jumanji
+BROWSER=/usr/bin/lynx
 
-# set history variables 
+# set history variables
 export HISTFILESIZE="1000"
 export HISTCONTROL="ignoredups"
 
@@ -66,7 +56,8 @@ set show-all-if-ambiguous on
 #The 'ls' family
 #---------------------------
 alias ll="ls -l --group-directories-first"
-alias ls="ls -hF --color"  # add colors for filetype recognition
+alias li="ls -li"
+alias ls="sudo ls -F --color"  # add colors for filetype recognition
 alias la="ls -a"           # show hidden files
 alias lx="ls -xb"          # sort by extension
 alias lk="ls -lSr"         # sort by size, biggest last
@@ -93,28 +84,38 @@ alias v="vim"
 alias vi="vim"
 alias sv="sudo vim"
 alias svi="sudo vim"
-alias wifi="wicd-curses"
+alias wifi="sudo wicd;wicd-curses"
 alias pong="ping -c 3 www.google.com"
 alias temp="acpi -t"
 alias exit="clear; exit"
 alias irc="rm -f /home/jason/.irssi/saved_colors & irssi"
 alias lock="xscreensaver-command --lock"
 alias ttytter="Scripts/ttytter.pl"
-alias chat="tmux attach"
+alias chat="irssi"
 alias dush="du -sm *|sort -n|tail"
 alias rss="newsbeuter"
 alias sync="~/.dropbox-dist/dropboxd &"
-alias config="cd /home/jason/Build/dwm/ && vim config.h"
+alias config="cd /home/jro/dwm/ && vim config.h"
 alias nocomment='egrep -v "^[ \t]*#|^[ \t]*$"'
 alias skype='ALSA_OSS_PCM_DEVICE="skype" aoss skype'
+alias cl="clear"
+alias hdd="df -h"
+alias www="lynx -accept_all_cookies"
+alias t="medit"
+alias p="mupdf"
+alias run="node"
+alias net="sudo dhcpcd"
+alias mus="mplayer *.mp3"
+alias radio="shell-fm"
+alias listen="cd data/English/Cambridge\ Target\ Score\ Toeic\ ESL\ Textbooks/Target\ Score\ CD2/; mplayer *wma"
 
 # grep
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
 # Power
-alias reboot="sudo shutdown -r now"
-alias shut="sudo shutdown -h now"
+alias reboot="sudo shutdown -r now; exit"
+alias shut="sudo shutdown -h now; exit"
 
 # Posts per day on Arch forum
 alias posts="python ~/Scripts/postsperday.py 25579"
@@ -135,6 +136,9 @@ alias pacup="sudo pacman-color -Syu"
 
 # sudo pacman -S by typing pac
 alias pac="sudo pacman -S"
+
+#sudo pacman -S by typing pacs
+alias pacs="sudo pacman -Ss"
 
 # Clean cache
 alias clean="sudo pacman -Sc"
@@ -216,7 +220,7 @@ goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 n() { $EDITOR ~/.notes/"$*".txt ; }
 nls () { tree -CR --noreport ~/.notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2; else if (NF==3) printf "  %s\n", $3 }' ;}
 
-# Print man pages 
+# Print man pages
 manp() { man -t "$@" | lpr -pPrinter; }
 
 # Create pdf of man page - requires ghostscript and mimeinfo
@@ -253,3 +257,4 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]PFc0c0c0" #white
     clear # bring us back to default input colours
 fi
+
